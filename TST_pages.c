@@ -1,10 +1,10 @@
-#include "TST.h"
+#include "TST_pages.h"
 
-struct node
+struct node_pages
 {
     Value val;
     unsigned char c;
-    TST *l, *m, *r;
+    TST_pages *l, *m, *r;
 };
 
 struct string
@@ -13,7 +13,11 @@ struct string
     int len;
 };
 
-TST *rec_insert(TST *t, String *key, Value val, int d)
+TST_pages* CreateTST(){
+    return NULL;
+}
+
+TST_pages *rec_insert_pages(TST_pages *t, String *key, Value val, int d)
 {
     unsigned char c = key->c[d];
     if (t == NULL)
@@ -40,7 +44,7 @@ TST *rec_insert(TST *t, String *key, Value val, int d)
     return t;
 }
 
-TST *rec_search(TST *t, String *key, int d)
+TST_pages *rec_search_pages(TST_pages *t, String *key, int d)
 {
     if (t == NULL)
     {
@@ -65,7 +69,7 @@ TST *rec_search(TST *t, String *key, int d)
     }
 }
 
-void traverseTSTAndSearch(TST *tst1, TST *tst2)
+void traverseTSTAndSearch(TST_pages *tst1, TST_pages *tst2)
 {
     if (tst1 == NULL)
         return;
@@ -80,7 +84,7 @@ void traverseTSTAndSearch(TST *tst1, TST *tst2)
         word.len = tst1->val->length;
 
         // Realiza a busca na TST2 usando a palavra
-        TST *result = rec_search(tst2, &word, 0);
+        TST_pages *result = rec_search(tst2, &word, 0);
 
         // Verifica se a palavra foi encontrada na TST2
         if (result != NULL)
