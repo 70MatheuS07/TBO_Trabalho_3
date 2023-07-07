@@ -13,8 +13,18 @@ struct string
     int len;
 };
 
-TST_pages* CreateTST(){
+TST_pages *CreateTST_pages()
+{
     return NULL;
+}
+
+TST_pages *create_node_pages()
+{
+    TST_pages *new = malloc(sizeof(TST_pages));
+    new->l = NULL;
+    new->m = NULL;
+    new->r = NULL;
+    return new;
 }
 
 TST_pages *rec_insert_pages(TST_pages *t, String *key, Value val, int d)
@@ -43,6 +53,10 @@ TST_pages *rec_insert_pages(TST_pages *t, String *key, Value val, int d)
     }
     return t;
 }
+TST_pages *TST_insert_pages(TST_pages *t, String *key, Value val)
+{
+    return rec_insert(t, key, val, 0);
+}
 
 TST_pages *rec_search_pages(TST_pages *t, String *key, int d)
 {
@@ -66,6 +80,19 @@ TST_pages *rec_search_pages(TST_pages *t, String *key, int d)
     else
     {
         return t;
+    }
+}
+
+Value TST_search(TST_pages *t, String *key)
+{
+    t = rec_search(t, key, 0);
+    if (t == NULL)
+    {
+        return NULL;
+    }
+    else
+    {
+        return t->val;
     }
 }
 

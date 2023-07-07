@@ -11,10 +11,15 @@ typedef struct string String;
 
 typedef int Value;
 
-TST_words *rec_insert_words(TST_words *t, String *key,String *page, Value val, int d);
 
+
+TST_words* CreateTST_words();
+TST_words *create_node_words();
+
+TST_words *rec_insert_words(TST_words *t, String *key,String *page, int d);
+
+TST_words* TST_insert_words(TST_words* t, String* key , Value val) ;
 TST_words *rec_search_words(TST_words *t, String *key, int d);
-
-void traverseTSTAndSearch(TST_words *tst1, TST_words *tst2);
+TST_pages* TST_search_words(TST_words* t, String* key);
 
 #endif
