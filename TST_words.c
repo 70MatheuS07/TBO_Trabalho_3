@@ -8,11 +8,6 @@ struct node_words
     TST_words *l, *m, *r;
 };
 
-struct string
-{
-    char *c;
-    int len;
-};
 
 TST_words *CreateTST_words()
 {
@@ -21,16 +16,17 @@ TST_words *CreateTST_words()
 
 TST_words *create_node_words()
 {
-    TST_words *new = malloc(sizeof(TST_words));
-    new->r = CreateTST_words();
-    new->l = CreateTST_words();
-    new->m = CreateTST_words();
-    return new;
+    TST_words *newNode = malloc(sizeof(TST_words));
+    newNode->pages=CreateTST_pages(NULL);
+    newNode->r = CreateTST_words();
+    newNode->l = CreateTST_words();
+    newNode->m = CreateTST_words();
+    return newNode;
 }
 
-TST_words *rec_insert_words(TST_words *t, String *key, String *page, int d)
+TST_words *rec_insert_words(TST_words *t, char *key, char *page, int d)
 {
-    unsigned char c = key->c[d];
+    unsigned char c = tolower(key[d]);
     if (t == NULL)
     {
         t = create_node_words();
@@ -44,7 +40,7 @@ TST_words *rec_insert_words(TST_words *t, String *key, String *page, int d)
     {
         t->r = rec_insert_words(t->r, key, page, d);
     }
-    else if (d < key->len - 1)
+    else if (d < strlen(key) - 1)
     {
         t->m = rec_insert_words(t->m, key, page, d + 1);
     }
@@ -54,35 +50,37 @@ TST_words *rec_insert_words(TST_words *t, String *key, String *page, int d)
         {
             t->qtd = 0;
         }
+        if(page!=NULL){
         t->pages = TST_insert_pages(t->pages, page, 1);
         t->qtd++;
+        }
     }
     return t;
 }
 
-TST_words *TST_insert_words(TST_words *t, String *key, Value val)
+TST_words *TST_insert_words(TST_words *t, char *key, char *page)
 {
-    return rec_insert(t, key, val, 0);
+    return rec_insert_words(t, key, page, 0);
 }
 
-TST_words *rec_search_words(TST_words *t, String *key, int d)
+TST_words *rec_search_words(TST_words *t, char *key, int d)
 {
     if (t == NULL)
     {
         return NULL;
     }
-    unsigned char c = key->c[d];
+    unsigned char c = tolower(key[d]); // Converte o caractere para minúsculo antes da comparação
     if (c < t->c)
     {
-        return rec_search(t->l, key, d);
+        return rec_search_words(t->l, key, d);
     }
     else if (c > t->c)
     {
-        return rec_search(t->r, key, d);
+        return rec_search_words(t->r, key, d);
     }
-    else if (d < key->len - 1)
+    else if (d < strlen(key) - 1)
     {
-        return rec_search(t->m, key, d + 1);
+        return rec_search_words(t->m, key, d + 1);
     }
     else
     {
@@ -90,9 +88,9 @@ TST_words *rec_search_words(TST_words *t, String *key, int d)
     }
 }
 
-TST_pages *TST_search_words(TST_words *t, String *key)
+TST_pages *TST_search_words(TST_words *t, char *key)
 {
-    t = rec_search(t, key, 0);
+    t = rec_search_words(t, key, 0);
     if (t == NULL)
     {
         return NULL;
@@ -100,5 +98,18 @@ TST_pages *TST_search_words(TST_words *t, String *key)
     else
     {
         return t->pages;
+    }
+}
+
+Value TST_search_StopWords(TST_words *t, char *key)
+{
+    t = rec_search_words(t, key, 0);
+    if (t == NULL)
+    {
+        return 0;
+    }
+    else
+    {
+        return 1;
     }
 }

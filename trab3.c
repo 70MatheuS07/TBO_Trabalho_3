@@ -1,33 +1,55 @@
-#include <stdio.h>  
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "TST_pages.h"
+#include "TST_words.h"
+#include "Arquivo.h"
+#include "MaqBusca.h"
+int main(int argc, char *argv[])
+{
+
+    TST_words *StopWords = CreateTST_words();
+    FILE *Stop_file = fopen("stopwords.txt", "r");
+
+    StopWords = MontaTST_StopWords(StopWords, Stop_file);
+
+    fclose(Stop_file);
+
+    FILE *index_file = fopen("index.txt", "r");
+    TST_words *Terms= CreateTST_words();
 
 
-int main (int argc,char *argv[]){
-
-    
+    Terms=MontaTST_Terms(Terms, index_file, StopWords);
+    char palavra_search[1000];
+    char lixo;
+    int cont=0;
+    TST_pages* IntercPages, *ant;
+    while(scanf("%s", palavra_search)==1){
+        scanf("%c", &lixo);
+        if(cont==0){
+            ant = TST_search_words(Terms, palavra_search);
+            IntercPages=ant;
+            cont++;
+        }
+        else{
+            ant = TST_search_words(Terms, palavra_search);
+            IntercPages=TST_intersection(ant, IntercPages);
+        }
+        if(lixo=='\n'){
+            break;
+            
+        }
+    }
+    int qtdlinhas=0;
+    qtdlinhas=ContaLinhasArquivoBuffer("index.txt");
+    char**result=calloc(qtdlinhas,sizeof(char*));
+    char aux[1000];
+    collectStrings(IntercPages, aux, result, 0);
+    for(int i=0;result[i]!=NULL;i++){
+        printf("%s ", result[i]);
+    }
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*#include <stdio.h>
 #include <stdlib.h>
