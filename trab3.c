@@ -43,8 +43,8 @@ int main(int argc, char *argv[])
     int qtdlinhas=0;
     qtdlinhas=ContaLinhasArquivoBuffer("index.txt");
     char**result=calloc(qtdlinhas,sizeof(char*));
-    char aux[1000];
-    collectStrings(IntercPages, aux, result, 0);
+    int contPalavras=0;
+    result=getTSTWords(IntercPages, &contPalavras, qtdlinhas, result);
     for(int i=0;result[i]!=NULL;i++){
         printf("%s ", result[i]);
     }

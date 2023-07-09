@@ -79,7 +79,7 @@ TST_pages *rec_search_pages(TST_pages *t, char *key, int d)
     }
 }
 
-Value TST_search(TST_pages *t, char *key)
+Value TST_search_pages(TST_pages *t, char *key)
 {
     t = rec_search_pages(t, key, 0);
     if (t == NULL)
@@ -92,47 +92,69 @@ Value TST_search(TST_pages *t, char *key)
     }
 }
 
-TST_pages *TST_intersection(TST_pages *t1, TST_pages *t2) {
-    if (t1 == NULL || t2 == NULL) {
-        return NULL; // Se alguma das TSTs for nula, retorna uma TST vazia
+TST_pages *TST_intersect_pages(TST_pages *t1, TST_pages *t2, TST_pages *t3, char *prefix, int d)
+{
+    if (t1 == NULL) return t3; // Se a primeira árvore é vazia, retorna a terceira árvore
+    if (d >= 500)
+    {
+        printf("Tamanho máximo do buffer excedido!\n");
+        return t3;
     }
+    t3 = TST_intersect_pages(t1->l, t2, t3, prefix, d); // Percorre a subárvore esquerda
 
-    TST_pages *result = CreateTST_pages(); // Cria uma nova TST para armazenar a interseção
-
-    // Percorre as TSTs simultaneamente
-    if (t1->c < t2->c) {
-        // Se o caractere atual em t1 é menor que o caractere atual em t2,
-        // busca a interseção nas subárvores à esquerda
-        result = TST_intersection(t1->l, t2);
-    } else if (t1->c > t2->c) {
-        // Se o caractere atual em t1 é maior que o caractere atual em t2,
-        // busca a interseção nas subárvores à direita
-        result = TST_intersection(t1, t2->r);
-    } else {
-        // Se os caracteres atuais em t1 e t2 são iguais,
-        // adiciona o caractere à TST resultante e busca a interseção nas subárvores do meio
-        result = create_node_pages();
-        result->c = t1->c;
-        result->m = TST_intersection(t1->m, t2->m);
+    prefix[d] = t1->c; // Adiciona o caractere do nó atual ao prefixo
+    if (t1->val == 1) // Se o nó atual tem valor 1, significa que é o final de uma string
+    {
+        prefix[d+1] = '\0'; // Termina a string com um caractere nulo
+        if (TST_search_pages(t2, prefix) == 1) // Verifica se a string também está na segunda árvore com valor 1
+        {
+            t3 = TST_insert_pages(t3, prefix, 1); // Insere a string na terceira árvore com valor 1
+        }
     }
-
-    return result;
+    t3 = TST_intersect_pages(t1->m, t2, t3, prefix, d+1); // Percorre a subárvore do meio
+    t3 = TST_intersect_pages(t1->r, t2, t3, prefix, d); // Percorre a subárvore direita
+    return t3; // Retorna a terceira árvore
 }
 
-void collectStrings(TST_pages *t, char *prefix, char **strings, int index)
+// Função que cria um buffer para armazenar o prefixo e chama a função recursiva
+TST_pages *TST_intersection(TST_pages *t1, TST_pages *t2)
 {
+    char* buffer=calloc(500,sizeof(char)); // Cria um buffer para armazenar o prefixo das strings
+    return TST_intersect_pages(t1, t2, NULL, buffer, 0); // Chama a função recursiva com uma terceira árvore vazia
+}
+
+void collectWords(TST_pages *t, char *buffer, int depth, char **words, int *count) {
     if (t == NULL) {
         return;
     }
 
-    collectStrings(t->l, prefix, strings, index);
+    // Percorre as subárvores esquerda, meio e direita
+    collectWords(t->l, buffer, depth, words, count);
 
-    prefix[index] = t->c;
-    prefix[index + 1] = '\0'; // Adiciona o caractere nulo para indicar o fim da string
-    strings[index] = strdup(prefix);
+    // Armazena o caractere atual no buffer
+    buffer[depth] = t->c;
 
-    collectStrings(t->m, prefix, strings, index + 1);
-    collectStrings(t->r, prefix, strings, index);
+    // Se chegou ao final da palavra (nó com valor não nulo), adiciona a palavra ao vetor
+    if (t->val != 0) {
+        buffer[depth + 1] = '\0'; // Adiciona o terminador nulo
+        words[*count] = strdup(buffer); // Copia a palavra para o vetor
+        (*count)++;
+    }
 
-    prefix[index] = '\0';
+    // Percorre a subárvore do meio
+    collectWords(t->m, buffer, depth + 1, words, count);
+
+    // Percorre a subárvore direita
+    collectWords(t->r, buffer, depth, words, count);
+}
+
+// Função principal para obter as palavras presentes na TST em um vetor
+char **getTSTWords(TST_pages *t, int *wordCount, int tam, char**words) {
+
+    int count = 0;
+    char* buffer=calloc(1000,sizeof(char));
+    collectWords(t, buffer, 0, words, &count);
+
+    *wordCount = count; // Atualiza o número de palavras
+    return words;
 }
