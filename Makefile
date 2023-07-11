@@ -2,7 +2,7 @@ CC = gcc -g
 LDLIBS = -lm
 
 # Arquivos fonte
-SRCS = trab3.c Arquivo.c Lista.c TST_pages.c TST_words.c TST_graph.c MaqBusca.c
+SRCS = trab3.c Arquivo.c TST_pages.c TST_words.c TST_graph.c MaqBusca.c page.c
 
 # Arquivos objeto correspondentes
 OBJS = $(SRCS:.c=.o)

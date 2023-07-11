@@ -5,6 +5,7 @@
 #include "TST_words.h"
 #include "Arquivo.h"
 #include "MaqBusca.h"
+#include "page.h"
 int main(int argc, char *argv[])
 {
 
@@ -41,14 +42,20 @@ int main(int argc, char *argv[])
         }
     }
     int qtdlinhas=0;
-    qtdlinhas=ContaLinhasArquivoBuffer("index.txt");
-    char**result=calloc(qtdlinhas,sizeof(char*));
+    qtdlinhas=ContaLinhasArquivoBuffer("index.txt")+1;
+    tPage**result=calloc(qtdlinhas,sizeof(tPage*));
     int contPalavras=0;
     result=getTSTWords(IntercPages, &contPalavras, qtdlinhas, result);
     for(int i=0;result[i]!=NULL;i++){
-        printf("%s ", result[i]);
+        printf("%s ", getNomePage(result[i]));
     }
+
+    FILE*Graph_file = fopen("graph.txt", "r");
+    TST_words*Graph=CreateTST_words();
+    Graph=MontaTST_graph(Graph,Graph_file);
+
     return 0;
+
 }
 
 /*#include <stdio.h>

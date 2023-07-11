@@ -30,7 +30,7 @@ char *ler_linha(FILE *fp)
             free(linha);
             return linhartn;
         }
-        tam = tam * 2;
+        tam = tam +50;
         linhartn = realloc(linhartn, tam);
     }
     free(linha);
