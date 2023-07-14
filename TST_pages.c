@@ -7,7 +7,6 @@ struct node_pages
     TST_pages *l, *m, *r;
 };
 
-
 TST_pages *CreateTST_pages()
 {
     return NULL;
@@ -94,33 +93,36 @@ Value TST_search_pages(TST_pages *t, char *key)
 
 TST_pages *TST_intersect_pages(TST_pages *t1, TST_pages *t2, TST_pages *t3, char *prefix, int d)
 {
-    if (t1 == NULL) return t3; // Se a primeira árvore é vazia, retorna a terceira árvore
+    if (t1 == NULL)
+        return t3; // Se a primeira árvore é vazia, retorna a terceira árvore
 
     t3 = TST_intersect_pages(t1->l, t2, t3, prefix, d); // Percorre a subárvore esquerda
 
     prefix[d] = t1->c; // Adiciona o caractere do nó atual ao prefixo
-    if (t1->val == 1) // Se o nó atual tem valor 1, significa que é o final de uma string
+    if (t1->val == 1)  // Se o nó atual tem valor 1, significa que é o final de uma string
     {
-        prefix[d+1] = '\0'; // Termina a string com um caractere nulo
+        prefix[d + 1] = '\0';                  // Termina a string com um caractere nulo
         if (TST_search_pages(t2, prefix) == 1) // Verifica se a string também está na segunda árvore com valor 1
         {
             t3 = TST_insert_pages(t3, prefix, 1); // Insere a string na terceira árvore com valor 1
         }
     }
-    t3 = TST_intersect_pages(t1->m, t2, t3, prefix, d+1); // Percorre a subárvore do meio
-    t3 = TST_intersect_pages(t1->r, t2, t3, prefix, d); // Percorre a subárvore direita
-    return t3; // Retorna a terceira árvore
+    t3 = TST_intersect_pages(t1->m, t2, t3, prefix, d + 1); // Percorre a subárvore do meio
+    t3 = TST_intersect_pages(t1->r, t2, t3, prefix, d);     // Percorre a subárvore direita
+    return t3;                                              // Retorna a terceira árvore
 }
 
 // Função que cria um buffer para armazenar o prefixo e chama a função recursiva
 TST_pages *TST_intersection(TST_pages *t1, TST_pages *t2)
 {
-    char* buffer=calloc(500,sizeof(char)); // Cria um buffer para armazenar o prefixo das strings
+    char *buffer = calloc(500, sizeof(char));            // Cria um buffer para armazenar o prefixo das strings
     return TST_intersect_pages(t1, t2, NULL, buffer, 0); // Chama a função recursiva com uma terceira árvore vazia
 }
 
-void collectWords(TST_pages *t, char *buffer, int depth, tPage **words, int *count, int tam) {
-    if (t == NULL) {
+void collectWords(TST_pages *t, char *buffer, int depth, tPage **words, int *count, int tam)
+{
+    if (t == NULL)
+    {
         return;
     }
 
@@ -131,9 +133,10 @@ void collectWords(TST_pages *t, char *buffer, int depth, tPage **words, int *cou
     buffer[depth] = t->c;
 
     // Se chegou ao final da palavra (nó com valor não nulo), adiciona a palavra ao vetor
-    if (t->val != 0) {
-        buffer[depth + 1] = '\0'; // Adiciona o terminador nulo
-        words[*count] = CriaPagina(buffer,0.0, 0, NULL);// Copia a palavra para o vetor
+    if (t->val != 0)
+    {
+        buffer[depth + 1] = '\0';                         // Adiciona o terminador nulo
+        words[*count] = CriaPagina(buffer, 0.0, 0, NULL); // Copia a palavra para o vetor
         (*count)++;
     }
 
@@ -145,12 +148,27 @@ void collectWords(TST_pages *t, char *buffer, int depth, tPage **words, int *cou
 }
 
 // Função principal para obter as palavras presentes na TST em um vetor
-tPage **getTSTWords(TST_pages *t, int *wordCount, int tam, tPage**words) {
+tPage **getTSTWords(TST_pages *t, int *wordCount, int tam, tPage **words)
+{
 
     int count = 0;
-    char* buffer=calloc(1000,sizeof(char));
+    char *buffer = calloc(1000, sizeof(char));
     collectWords(t, buffer, 0, words, &count, tam);
 
     *wordCount = count; // Atualiza o número de palavras
     return words;
+}
+
+void liberaTST_Pages(TST_pages *tst_page)
+{
+    if (tst_page == NULL)
+    {
+        return;
+    }
+
+    liberaTST_Pages(tst_page->l);
+    liberaTST_Pages(tst_page->m);
+    liberaTST_Pages(tst_page->r);
+
+    free(tst_page);
 }

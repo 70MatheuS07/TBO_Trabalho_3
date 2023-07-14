@@ -30,6 +30,9 @@ int main(int argc, char *argv[])
     TST_words *Terms = CreateTST_words();
 
     Terms = MontaTST_Terms(Terms, index_file, StopWords);
+
+    liberaTST_words(StopWords);
+
     char palavra_search[1000];
     char lixo;
     int cont = 0;
@@ -74,6 +77,7 @@ int main(int argc, char *argv[])
 
     liberaMatrizPage(result);
     liberaMatrizPage(grafo);
+    liberaTST_words(Terms);
 
     return 0;
 }

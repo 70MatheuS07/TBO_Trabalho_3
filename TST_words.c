@@ -8,7 +8,6 @@ struct node_words
     TST_words *l, *m, *r;
 };
 
-
 TST_words *CreateTST_words()
 {
     return NULL;
@@ -17,7 +16,7 @@ TST_words *CreateTST_words()
 TST_words *create_node_words()
 {
     TST_words *newNode = malloc(sizeof(TST_words));
-    newNode->pages=CreateTST_pages(NULL);
+    newNode->pages = CreateTST_pages(NULL);
     newNode->r = CreateTST_words();
     newNode->l = CreateTST_words();
     newNode->m = CreateTST_words();
@@ -50,9 +49,10 @@ TST_words *rec_insert_words(TST_words *t, char *key, char *page, int d)
         {
             t->qtd = 0;
         }
-        if(page!=NULL){
-        t->pages = TST_insert_pages(t->pages, page, 1);
-        t->qtd++;
+        if (page != NULL)
+        {
+            t->pages = TST_insert_pages(t->pages, page, 1);
+            t->qtd++;
         }
     }
     return t;
@@ -112,4 +112,20 @@ Value TST_search_StopWords(TST_words *t, char *key)
     {
         return 1;
     }
+}
+
+void liberaTST_words(TST_words *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+
+    liberaTST_words(root->l);
+    liberaTST_words(root->m);
+    liberaTST_words(root->r);
+
+    liberaTST_Pages(root->pages);
+
+    free(root);
 }

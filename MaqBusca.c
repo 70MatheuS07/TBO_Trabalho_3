@@ -90,6 +90,8 @@ TST_words *MontaTST_graph(TST_words *Graph, FILE *graph_file)
             cont++;
             token = strtok(NULL, " \t");
         }
+
+        free(linha);
     }
 }
 
@@ -291,52 +293,63 @@ void CalculaPageRanks(tPage **Graph, int tamvet)
     }
 }
 
-void OrdenaEImprimeSaida(tPage**Grafo, tPage**pages, int tamvet, char*search){
+void OrdenaEImprimeSaida(tPage **Grafo, tPage **pages, int tamvet, char *search)
+{
     int i;
 
     for (i = 0; pages[i] != NULL; i++)
     {
-        for(int j=0;j<tamvet;j++){
-            if(strcmp(getNomePage(pages[i]),getNomePage(Grafo[j]))==0){
-                setPageRank(getPageRank(Grafo[j]),pages[i]);
+        for (int j = 0; j < tamvet; j++)
+        {
+            if (strcmp(getNomePage(pages[i]), getNomePage(Grafo[j])) == 0)
+            {
+                setPageRank(getPageRank(Grafo[j]), pages[i]);
                 break;
             }
         }
     }
-    qsort(pages,i, sizeof(tPage*), PagesCmp);
+    qsort(pages, i, sizeof(tPage *), PagesCmp);
 
     printf("search:%s\n", search);
     printf("pages:");
-    for(i = 0; pages[i] != NULL; i++){
-        if(pages[i+1]==NULL){
+    for (i = 0; pages[i] != NULL; i++)
+    {
+        if (pages[i + 1] == NULL)
+        {
             printf("%s", getNomePage(pages[i]));
         }
-        else{
+        else
+        {
             printf("%s ", getNomePage(pages[i]));
         }
     }
     printf("\npr:");
-    for(i = 0; pages[i] != NULL; i++){
-        if(pages[i+1]==NULL){
+    for (i = 0; pages[i] != NULL; i++)
+    {
+        if (pages[i + 1] == NULL)
+        {
             printf("%lf", getPageRank(pages[i]));
         }
-        else{
+        else
+        {
             printf("%lf ", getPageRank(pages[i]));
         }
     }
     printf("\n");
 }
 
-
-int PagesCmp(const void*page1, const void*page2){
-    tPage *A1 = *(tPage**)page1;
-    tPage *A2 = *(tPage**)page2;
-    if(getPageRank(A1)<getPageRank(A2)){
+int PagesCmp(const void *page1, const void *page2)
+{
+    tPage *A1 = *(tPage **)page1;
+    tPage *A2 = *(tPage **)page2;
+    if (getPageRank(A1) < getPageRank(A2))
+    {
         return 1;
     }
-    else if(getPageRank(A1)>getPageRank(A2)){
+    else if (getPageRank(A1) > getPageRank(A2))
+    {
         return -1;
     }
 
-    return strcmp(getNomePage(A1), getNomePage(A2));   
+    return strcmp(getNomePage(A1), getNomePage(A2));
 }
