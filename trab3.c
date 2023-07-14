@@ -43,16 +43,19 @@ int main(int argc, char *argv[])
     }
     int qtdlinhas=0;
     qtdlinhas=ContaLinhasArquivoBuffer("index.txt")+1;
-    tPage**result=calloc(qtdlinhas,sizeof(tPage*));
+    char**result=calloc(qtdlinhas,sizeof(tPage*));
     int contPalavras=0;
     result=getTSTWords(IntercPages, &contPalavras, qtdlinhas, result);
+    //retirar depois
     for(int i=0;result[i]!=NULL;i++){
-        printf("%s ", getNomePage(result[i]));
+        printf("%s ", result[i]);
     }
 
     FILE*Graph_file = fopen("graph.txt", "r");
-    TST_words*Graph=CreateTST_words();
-    Graph=MontaTST_graph(Graph,Graph_file);
+    tPage**grafo= calloc(qtdlinhas,sizeof(tPage*));
+    MontaGrafo(grafo, Graph_file,qtdlinhas);
+
+    
 
     return 0;
 

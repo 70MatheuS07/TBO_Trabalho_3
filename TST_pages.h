@@ -21,6 +21,6 @@ TST_pages *rec_search_pages(TST_pages *t, char *key, int d);
 Value TST_search_pages(TST_pages *t, char *key);
 TST_pages *TST_intersection(TST_pages *t1, TST_pages *t2);
 TST_pages *TST_intersect_pages(TST_pages *t1, TST_pages *t2, TST_pages *t3, char *prefix, int d);
-void collectWords(TST_pages *t, char *buffer, int depth, tPage **words, int *count, int tam);
-tPage **getTSTWords(TST_pages *t, int *wordCount, int tam, tPage**words);
+void collectWords(TST_pages *t, char *buffer, int depth, char**words, int *count, int tam);
+char **getTSTWords(TST_pages *t, int *wordCount, int tam, char**words);
 #endif
