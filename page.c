@@ -39,6 +39,3 @@ void setPageRank(double pagerank, tPage*page){
     page->PageRank=pagerank;
 }
 
-double getPageRank(tPage*page){
-    return page->PageRank;
-}

@@ -98,6 +98,7 @@ void MontaGrafo(tPage **Graph, FILE *graph_file, int tam)
     char *linha;
     char *arq_Origem;
     int qtd, cont = 0;
+    double pagerank;
 
     for (int i = 0;; i++)
     {
@@ -121,7 +122,8 @@ void MontaGrafo(tPage **Graph, FILE *graph_file, int tam)
             {
                 break;
             }
-            Graph[i] = CriaPagina(arq_Origem, 0.0, qtd, CriaLista());
+            pagerank = (1 / (double)tam);
+            Graph[i] = CriaPagina(arq_Origem, pagerank, qtd, CriaLista());
             cont++;
             token = strtok(NULL, " \t");
         }
@@ -169,7 +171,7 @@ void MontaGrafo(tPage **Graph, FILE *graph_file, int tam)
         free(linha);
     }
 }
-
+/**
 void CalculaPageRanks(char **pages, tPage **Graph, int tamvet)
 {
 
@@ -200,6 +202,7 @@ void CalculaPageRanks(char **pages, tPage **Graph, int tamvet)
     double pagerank;
     double somatorio = 0;
     tPage *pagAtual;
+    int finaliza = 0;
     while (1)
     {
         for (int i = 0; i < tam; i++)
@@ -219,15 +222,121 @@ void CalculaPageRanks(char **pages, tPage **Graph, int tamvet)
                 somatorio += getPageRank(Graph[getpos(p)]);
                 p = RetornaProx(p);
             }
-            pagerank += 0.85*somatorio;
+            pagerank += 0.85 * somatorio;
             atual[i] = pagerank;
         }
+
+        for (int i = 0; i < tam; i++)
+        {
+            if ((getPageRank(Graph[map[i]]) - atual[i]) < pow(10, -6))
+            {
+                break;
+                finaliza = 1;
+            }
+        }
+        if (finaliza)
+        {
+            break;
+        }
+
     }
-    for (int i = 0; i < tam; i++)
+}*/
+
+void CalculaPageRanks(tPage **Graph, int tamvet)
+{
+    int tam = 0;
+    double *atual = calloc(tamvet, sizeof(double));
+
+    // mapeia os termos no vetor principal
+    int pos;
+
+    // calcula o pagerank de fato
+    double pagerank;
+    double somatorio = 0;
+    tPage *pagAtual;
+    while (1)
     {
-        if ((getPageRank(Graph[map[i]]) - atual[i]) < pow(10, -6))
+        for (int i = 0; i < tamvet; i++)
+        {
+            pagAtual = Graph[i];
+            tCelula *p = RetornaPrimeiro(getLista(pagAtual));
+            if (getQtd(pagAtual) == 0)
+            {
+                pagerank = (0.15 / tamvet) + 0.85 * getPageRank(pagAtual);
+            }
+            else
+            {
+                pagerank = (0.15 / tamvet);
+            }
+            while (p != NULL)
+            {
+                somatorio += getPageRank(Graph[getpos(p)]) / (double)getQtd(Graph[getpos(p)]);
+                p = RetornaProx(p);
+            }
+            pagerank += 0.85 * somatorio;
+            atual[i] = pagerank;
+            somatorio = 0;
+        }
+        double E = 0.0;
+        for (int i = 0; i < tamvet; i++)
+        {
+            double diff = fabs(atual[i] - getPageRank(Graph[i]));
+            E += diff;
+            setPageRank(atual[i], Graph[i]);
+        }
+        if (E < pow(10, -6))
         {
             break;
         }
     }
+}
+
+void OrdenaEImprimeSaida(tPage**Grafo, tPage**pages, int tamvet, char*search){
+    int i;
+
+    for (i = 0; pages[i] != NULL; i++)
+    {
+        for(int j=0;j<tamvet;j++){
+            if(strcmp(getNomePage(pages[i]),getNomePage(Grafo[j]))==0){
+                setPageRank(getPageRank(Grafo[j]),pages[i]);
+                break;
+            }
+        }
+    }
+    qsort(pages,i, sizeof(tPage*), PagesCmp);
+
+    printf("search:%s\n", search);
+    printf("pages:");
+    for(i = 0; pages[i] != NULL; i++){
+        if(pages[i+1]==NULL){
+            printf("%s", getNomePage(pages[i]));
+        }
+        else{
+            printf("%s ", getNomePage(pages[i]));
+        }
+    }
+    printf("\npr:");
+    for(i = 0; pages[i] != NULL; i++){
+        if(pages[i+1]==NULL){
+            printf("%lf", getPageRank(pages[i]));
+        }
+        else{
+            printf("%lf ", getPageRank(pages[i]));
+        }
+    }
+    printf("\n");
+}
+
+
+int PagesCmp(const void*page1, const void*page2){
+    tPage *A1 = *(tPage**)page1;
+    tPage *A2 = *(tPage**)page2;
+    if(getPageRank(A1)<getPageRank(A2)){
+        return 1;
+    }
+    else if(getPageRank(A1)>getPageRank(A2)){
+        return -1;
+    }
+
+    return strcmp(getNomePage(A1), getNomePage(A2));   
 }

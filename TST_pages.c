@@ -95,11 +95,7 @@ Value TST_search_pages(TST_pages *t, char *key)
 TST_pages *TST_intersect_pages(TST_pages *t1, TST_pages *t2, TST_pages *t3, char *prefix, int d)
 {
     if (t1 == NULL) return t3; // Se a primeira árvore é vazia, retorna a terceira árvore
-    if (d >= 500)
-    {
-        printf("Tamanho máximo do buffer excedido!\n");
-        return t3;
-    }
+
     t3 = TST_intersect_pages(t1->l, t2, t3, prefix, d); // Percorre a subárvore esquerda
 
     prefix[d] = t1->c; // Adiciona o caractere do nó atual ao prefixo
@@ -123,7 +119,7 @@ TST_pages *TST_intersection(TST_pages *t1, TST_pages *t2)
     return TST_intersect_pages(t1, t2, NULL, buffer, 0); // Chama a função recursiva com uma terceira árvore vazia
 }
 
-void collectWords(TST_pages *t, char *buffer, int depth, char **words, int *count, int tam) {
+void collectWords(TST_pages *t, char *buffer, int depth, tPage **words, int *count, int tam) {
     if (t == NULL) {
         return;
     }
@@ -137,7 +133,7 @@ void collectWords(TST_pages *t, char *buffer, int depth, char **words, int *coun
     // Se chegou ao final da palavra (nó com valor não nulo), adiciona a palavra ao vetor
     if (t->val != 0) {
         buffer[depth + 1] = '\0'; // Adiciona o terminador nulo
-        words[*count] = strdup(buffer); // Copia a palavra para o vetor
+        words[*count] = CriaPagina(buffer,0.0, 0, NULL);// Copia a palavra para o vetor
         (*count)++;
     }
 
@@ -149,7 +145,7 @@ void collectWords(TST_pages *t, char *buffer, int depth, char **words, int *coun
 }
 
 // Função principal para obter as palavras presentes na TST em um vetor
-char **getTSTWords(TST_pages *t, int *wordCount, int tam, char**words) {
+tPage **getTSTWords(TST_pages *t, int *wordCount, int tam, tPage**words) {
 
     int count = 0;
     char* buffer=calloc(1000,sizeof(char));

@@ -9,6 +9,15 @@
 int main(int argc, char *argv[])
 {
 
+    int qtdlinhas = 0;
+    qtdlinhas = ContaLinhasArquivoBuffer("index.txt") + 1;
+    tPage **result = calloc(qtdlinhas, sizeof(tPage *));
+
+    FILE *Graph_file = fopen("graph.txt", "r");
+    tPage **grafo = calloc(qtdlinhas, sizeof(tPage *));
+    MontaGrafo(grafo, Graph_file, qtdlinhas);
+    CalculaPageRanks(grafo, qtdlinhas);
+
     TST_words *StopWords = CreateTST_words();
     FILE *Stop_file = fopen("stopwords.txt", "r");
 
@@ -17,48 +26,52 @@ int main(int argc, char *argv[])
     fclose(Stop_file);
 
     FILE *index_file = fopen("index.txt", "r");
-    TST_words *Terms= CreateTST_words();
+    TST_words *Terms = CreateTST_words();
 
-
-    Terms=MontaTST_Terms(Terms, index_file, StopWords);
+    Terms = MontaTST_Terms(Terms, index_file, StopWords);
     char palavra_search[1000];
     char lixo;
-    int cont=0;
-    TST_pages* IntercPages, *ant;
-    while(scanf("%s", palavra_search)==1){
-        scanf("%c", &lixo);
-        if(cont==0){
-            ant = TST_search_words(Terms, palavra_search);
-            IntercPages=ant;
-            cont++;
-        }
-        else{
-            ant = TST_search_words(Terms, palavra_search);
-            IntercPages=TST_intersection(ant, IntercPages);
-        }
-        if(lixo=='\n'){
-            break;
-            
-        }
+    int cont = 0;
+    TST_pages *IntercPages, *ant;
+    char*linha, *linhaPesquisa;
+    while (1){
+    linha=ler_linha(stdin);
+
+    if(linha==NULL){
+        break;
     }
-    int qtdlinhas=0;
-    qtdlinhas=ContaLinhasArquivoBuffer("index.txt")+1;
-    char**result=calloc(qtdlinhas,sizeof(tPage*));
-    int contPalavras=0;
-    result=getTSTWords(IntercPages, &contPalavras, qtdlinhas, result);
-    //retirar depois
+    int tamlinha=strlen(linha);
+    linhaPesquisa=calloc(tamlinha+1, sizeof(char));
+    strcpy(linhaPesquisa, linha);
+    char *token = strtok(linha, " ");
+        while (token!=NULL)
+        {
+            if (cont == 0)
+            {
+                ant = TST_search_words(Terms, token);
+                IntercPages = ant;
+                cont++;
+            }
+            else
+            {
+                ant = TST_search_words(Terms, token);
+                IntercPages = TST_intersection(ant, IntercPages);
+            }
+            token = strtok(NULL, " ");
+        }
+    cont=0;
+    int contPalavras = 0;
+    result = getTSTWords(IntercPages, &contPalavras, qtdlinhas, result);
+    OrdenaEImprimeSaida(grafo,result, qtdlinhas, linhaPesquisa);
+    free(linha);
+    free(linhaPesquisa);
     for(int i=0;result[i]!=NULL;i++){
-        printf("%s ", result[i]);
+        free(result[i]);
+        result[i]=NULL;
     }
-
-    FILE*Graph_file = fopen("graph.txt", "r");
-    tPage**grafo= calloc(qtdlinhas,sizeof(tPage*));
-    MontaGrafo(grafo, Graph_file,qtdlinhas);
-
-    
+    }
 
     return 0;
-
 }
 
 /*#include <stdio.h>

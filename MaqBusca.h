@@ -14,5 +14,9 @@
 TST_words* MontaTST_StopWords(TST_words *StopWords, FILE*Stop_file);
 TST_words* MontaTST_Terms(TST_words *Terms, FILE *index_file, TST_words*StopWords);
 TST_words*MontaTST_graph(TST_words*Graph, FILE*graph_file);
-void CalculaPageRanks(char**pages, tPage**Graph, int tamvet);
+void MontaGrafo(tPage **Graph, FILE *graph_file, int tam);
+void CalculaPageRanks(tPage **Graph, int tamvet);
+void OrdenaEImprimeSaida(tPage**Grafo, tPage**pages, int tamvet, char*search);
+int PagesCmp(const void*page1, const void*page2);
+
 #endif
