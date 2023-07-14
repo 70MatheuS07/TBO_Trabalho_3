@@ -260,8 +260,8 @@ search:exultantly nellanno
 pages:
 pr:
 search:swipin hardly
-pages:19041-8.txt
-pr:0.001806
+pages:
+pr:
 search:jerkedfor verdienen
 pages:
 pr:
@@ -458,8 +458,8 @@ search:venasque clerkes
 pages:
 pr:
 search:overeengekomen eten
-pages:22491-8.txt
-pr:0.000300
+pages:
+pr:
 search:americain toile
 pages:
 pr:
@@ -473,8 +473,8 @@ search:aaa14coa vulpes
 pages:
 pr:
 search:descripcion plata
-pages:29703-8.txt
-pr:0.000580
+pages:
+pr:
 search:dellordine rendant
 pages:
 pr:
@@ -548,8 +548,8 @@ search:concluir ventosa
 pages:
 pr:
 search:christophers around
-pages:3469.txt
-pr:0.000300
+pages:
+pr:
 search:unabhangigkeit rabbis
 pages:
 pr:
@@ -584,8 +584,8 @@ search:approdare vostres
 pages:
 pr:
 search:motionless trudged
-pages:6157.txt
-pr:0.000300
+pages:
+pr:
 search:ceea1aoaa3cea levantou
 pages:
 pr:
@@ -680,8 +680,8 @@ search:scritto suomenkielisen
 pages:
 pr:
 search:evidencia religiosos
-pages:27387-8.txt
-pr:0.000831
+pages:
+pr:
 search:meaner pegge6
 pages:
 pr:
@@ -1202,8 +1202,8 @@ search:poneret saleihin
 pages:
 pr:
 search:lezer russen
-pages:18339-8.txt
-pr:0.000691
+pages:
+pr:
 search:selecting invocations
 pages:
 pr:
@@ -1265,8 +1265,8 @@ search:anomalia chovesse
 pages:
 pr:
 search:salted drain
-pages:25631-8.txt
-pr:0.004881
+pages:
+pr:
 search:vibrationa hephzibah
 pages:
 pr:
@@ -1412,8 +1412,8 @@ search:vieillard worseand
 pages:
 pr:
 search:36 employees
-pages:11009.txt
-pr:0.001251
+pages:
+pr:
 search:zentralkataloge wastrel
 pages:
 pr:
@@ -1466,8 +1466,8 @@ search:trappiste unvaried
 pages:
 pr:
 search:passeggiate finalmente
-pages:28785-8.txt
-pr:0.000310
+pages:
+pr:
 search:experimental ablington
 pages:
 pr:
@@ -1850,8 +1850,8 @@ search:overeengekomen darranger
 pages:
 pr:
 search:e1a1ce2e2a discover
-pages:23981-0.txt
-pr:0.010845
+pages:
+pr:
 search:feasibility dixhuit
 pages:
 pr:
@@ -2057,11 +2057,11 @@ search:mas morgan
 pages:
 pr:
 search:carico partita
-pages:20062-8.txt 19059-8.txt
-pr:0.000326 0.000300
+pages:
+pr:
 search:employees etc
-pages:11009.txt 24469-8.txt
-pr:0.001251 0.000300
+pages:
+pr:
 search:faneuil populacehi
 pages:
 pr:
@@ -2075,8 +2075,8 @@ search:xi2 mensonge
 pages:
 pr:
 search:presente congratula
-pages:11714-8.txt
-pr:0.000300
+pages:
+pr:
 search:impassioned eaton
 pages:
 pr:
@@ -2201,8 +2201,8 @@ search:virstaa provient
 pages:
 pr:
 search:carried
-pages:19953-8.txt 18400.txt 28679-8.txt 7194.txt 26408-8.txt 28396-8.txt 25486.txt 10473-8.txt 11174.txt 13881-0.txt 1081.txt 27286-8.txt 12548-8.txt 10494-8.txt 261.txt 27814.txt 27711-8.txt 27939-8.txt 19811-8.txt 2966.txt 19489.txt 1555.txt 19254-0.txt 19395-8.txt 11159-8.txt 7193.txt 11498-8.txt 23744-8.txt 18964-8.txt 7949-8.txt 24310-8.txt 16631.txt 23661.txt 108.txt 11169-8.txt 1480.txt 27881-8.txt 3356.txt 16118-8.txt 6391.txt 22540.txt 124.txt 16284-8.txt 19615.txt 11540-8.txt 19610.txt 12090.txt 27021-8.txt 19194.txt 24313-8.txt 12416.txt 20447.txt 18834-0.txt 21242.txt 13548-8.txt 51.txt 13644-8.txt 24347.txt 18572-8.txt 10337.txt 12655-8.txt 16520-8.txt 21635.txt 25604-0.txt 29879-0.txt 13899.txt 11458-8.txt 19487-0.txt 17048-8.txt 12732-8.txt 5392.txt 13877-8.txt 27190-8.txt 3597.txt 23595-8.txt 6023.txt 12164.txt 28135-8.txt 25444.txt 21508-8.txt 28197.txt 25295-8.txt 29171.txt 11009.txt 23737.txt 28987-8.txt 1643.txt 22127-8.txt 11006.txt 29468-8.txt 28514-8.txt 4149.txt 16860-8.txt 12810.txt 24000-8.txt 6191.txt 17054.txt 8800.txt 4131.txt 14759.txt 1327.txt 2523-8.txt 245.txt 10957-8.txt 710.txt 1487.txt 27099-8.txt 11623-8.txt 28301-8.txt 22959-8.txt 29650-8.txt 27631.txt 17100-8.txt 15171.txt 30685-8.txt 20195-8.txt 29471.txt 19087.txt 13910.txt 15506-8.txt 22875.txt 25088-8.txt 23929.txt 16691-8.txt 24580-8.txt 25061-8.txt 5615-8.txt 10479.txt 18937.txt 12336.txt 29668-8.txt 24856-8.txt 12894-8.txt 20473.txt 21865-8.txt 3888.txt 2713-8.txt 16808-8.txt 21538.txt 7529.txt 11617-8.txt 11573-8.txt 13578-8.txt 28066-0.txt 16628-8.txt 11323-8.txt 29868-8.txt 605.txt 11404.txt 12592-8.txt 13778-8.txt 25492-8.txt 16354-8.txt 29633-8.txt 15025-8.txt 26668-8.txt 4153.txt 14755-8.txt 13342-8.txt 23002-8.txt 14488.txt 19252-0.txt 10027.txt 10070.txt 10325.txt 10468.txt 10986.txt 11060.txt 11094.txt 11648-8.txt 11735.txt 11935.txt 12175-8.txt 12493.txt 13444.txt 14936-8.txt 15436-8.txt 15452-8.txt 15563-8.txt 15991-8.txt 16098-8.txt 16485-8.txt 16505-8.txt 17302-8.txt 17462-8.txt 18204-8.txt 18548.txt 19262-8.txt 19277-0.txt 19603-8.txt 19852.txt 20104-8.txt 2086.txt 21469.txt 21842.txt 21846-8.txt 22088-8.txt 23115.txt 23138-8.txt 23581-8.txt 24469-8.txt 24954-8.txt 25302-8.txt 25682-8.txt 26013-8.txt 26735-8.txt 27341-8.txt 27572-8.txt 2791.txt 27999-0.txt 28073-0.txt 28492-8.txt 28744-0.txt 28815-8.txt 28859-8.txt 28883.txt 2893.txt 29100-8.txt 29463-8.txt 3155-0.txt 3469.txt 3877.txt 4704.txt 5225.txt 535.txt
-pr:0.011669 0.011639 0.010239 0.010126 0.009648 0.009351 0.009179 0.009163 0.009048 0.008998 0.008705 0.008598 0.008534 0.008287 0.008206 0.008094 0.007979 0.007938 0.007664 0.007469 0.007211 0.007147 0.006794 0.006754 0.006157 0.006114 0.006067 0.006048 0.005815 0.005613 0.005562 0.005531 0.005510 0.005264 0.005228 0.005191 0.005119 0.005076 0.004985 0.004735 0.004672 0.004619 0.004509 0.004195 0.004189 0.004118 0.004019 0.003835 0.003709 0.003656 0.003653 0.003543 0.003540 0.003339 0.003295 0.002940 0.002939 0.002914 0.002857 0.002791 0.002562 0.002560 0.002396 0.002336 0.002244 0.002242 0.002140 0.002121 0.001961 0.001929 0.001710 0.001688 0.001673 0.001625 0.001514 0.001418 0.001347 0.001335 0.001315 0.001307 0.001286 0.001257 0.001251 0.001251 0.001211 0.001174 0.001173 0.001171 0.001145 0.001055 0.001053 0.001050 0.000949 0.000828 0.000780 0.000780 0.000758 0.000741 0.000719 0.000713 0.000676 0.000659 0.000655 0.000650 0.000642 0.000625 0.000619 0.000610 0.000569 0.000562 0.000555 0.000543 0.000540 0.000530 0.000527 0.000490 0.000485 0.000482 0.000477 0.000458 0.000456 0.000445 0.000444 0.000439 0.000439 0.000438 0.000430 0.000430 0.000425 0.000422 0.000420 0.000398 0.000388 0.000384 0.000380 0.000379 0.000378 0.000377 0.000376 0.000376 0.000373 0.000364 0.000363 0.000352 0.000348 0.000347 0.000346 0.000339 0.000328 0.000328 0.000324 0.000323 0.000319 0.000312 0.000310 0.000309 0.000308 0.000306 0.000304 0.000304 0.000304 0.000304 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300
+pages:
+pr:
 search:hunter sortovalta
 pages:
 pr:
@@ -2219,8 +2219,8 @@ search:ylimyksen kerling
 pages:
 pr:
 search:nellanno
-pages:20062-8.txt
-pr:0.000326
+pages:
+pr:
 search:wallichs cierto
 pages:
 pr:
@@ -2246,8 +2246,8 @@ search:monnoie 5961887
 pages:
 pr:
 search:groeien eten
-pages:18339-8.txt
-pr:0.000691
+pages:
+pr:
 search:aae cancarem
 pages:
 pr:
@@ -2375,8 +2375,8 @@ search:propaganda compress
 pages:
 pr:
 search:97 explosions
-pages:11478.txt
-pr:0.000921
+pages:
+pr:
 search:menschheid herrick
 pages:
 pr:
@@ -2453,8 +2453,8 @@ search:coelius thoughtperhaps
 pages:
 pr:
 search:commentators eventually
-pages:22088-8.txt
-pr:0.000300
+pages:
+pr:
 search:advertidos unkind
 pages:
 pr:
@@ -2564,8 +2564,8 @@ search:pleeas lepanto
 pages:
 pr:
 search:lecon mas
-pages:12251.txt
-pr:0.006486
+pages:
+pr:
 search:wastrel jommoisia
 pages:
 pr:
@@ -2738,8 +2738,8 @@ search:onetothree kassner
 pages:
 pr:
 search:vindre ladorable
-pages:18198-8.txt
-pr:0.001566
+pages:
+pr:
 search:foreshadowing philipps
 pages:
 pr:
@@ -2822,8 +2822,8 @@ search:patriarchal spinnin
 pages:
 pr:
 search:propaganda overall
-pages:21197-8.txt
-pr:0.008155
+pages:
+pr:
 search:cavilling albrecht
 pages:
 pr:
@@ -2831,8 +2831,8 @@ search:pennut convinrent
 pages:
 pr:
 search:locusttrees six
-pages:7193.txt
-pr:0.006114
+pages:
+pr:
 search:youif kirotut
 pages:
 pr:
@@ -3092,8 +3092,8 @@ search:erscheinen calcul
 pages:
 pr:
 search:esos mas
-pages:15531-8.txt 29703-8.txt
-pr:0.001509 0.000580
+pages:
+pr:
 search:charlatans jokohan
 pages:
 pr:
@@ -3137,8 +3137,8 @@ search:avisez tassgoung
 pages:
 pr:
 search:devenu detoffe
-pages:11495.txt
-pr:0.005338
+pages:
+pr:
 search:esos reliqui
 pages:
 pr:
@@ -3389,8 +3389,8 @@ search:fightings amiconon
 pages:
 pr:
 search:anothernow limit
-pages:29100-8.txt
-pr:0.000300
+pages:
+pr:
 search:swipin saleihin
 pages:
 pr:
@@ -3461,8 +3461,8 @@ search:brigs deboires
 pages:
 pr:
 search:scholarly
-pages:28396-8.txt 21197-8.txt 16284-8.txt 28631-8.txt 25295-8.txt 13897.txt 15506-8.txt 10479.txt 10027.txt 11197.txt 5225.txt
-pr:0.009351 0.008155 0.004509 0.002048 0.001257 0.000461 0.000458 0.000430 0.000300 0.000300 0.000300
+pages:
+pr:
 search:bugle luggagehow
 pages:
 pr:
@@ -3641,8 +3641,8 @@ search:pousse friheter
 pages:
 pr:
 search:limit stateoverriding
-pages:11289-8.txt
-pr:0.000300
+pages:
+pr:
 search:hephzibah nickte
 pages:
 pr:
@@ -3800,8 +3800,8 @@ search:kuuntelin huleboere
 pages:
 pr:
 search:photographers darkcomplexioned
-pages:17054.txt
-pr:0.000758
+pages:
+pr:
 search:evitar ligaments
 pages:
 pr:
@@ -3824,8 +3824,8 @@ search:indigenes ribbondecked
 pages:
 pr:
 search:reliqui dedit
-pages:16400-8.txt
-pr:0.001823
+pages:
+pr:
 search:vastustetaan hver
 pages:
 pr:
@@ -4340,8 +4340,8 @@ search:kynsiinsa understandyes
 pages:
 pr:
 search:meaning solid
-pages:25427.txt 3356.txt 17048-8.txt 1643.txt 8800.txt 28269-8.txt 18728-8.txt 13353.txt 30685-8.txt 11573-8.txt 605.txt 13342-8.txt 11648-8.txt 15563-8.txt 17462-8.txt 19874-8.txt 28883.txt 29713-8.txt
-pr:0.005703 0.005076 0.001961 0.001173 0.000741 0.000728 0.000592 0.000586 0.000527 0.000364 0.000339 0.000304 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300
+pages:
+pr:
 search:redigiert gronfaythers
 pages:
 pr:
@@ -4352,8 +4352,8 @@ search:verhalt etc
 pages:
 pr:
 search:kerling
-pages:16846-8.txt
-pr:0.000300
+pages:
+pr:
 search:tyytymatta tuvilta
 pages:
 pr:
@@ -4397,8 +4397,8 @@ search:aloelike unkind
 pages:
 pr:
 search:intermediate recurred
-pages:19615.txt
-pr:0.004195
+pages:
+pr:
 search:photographers svedese
 pages:
 pr:
@@ -4451,8 +4451,8 @@ search:brahmana callate
 pages:
 pr:
 search:propaganda fogo
-pages:29417-8.txt
-pr:0.000300
+pages:
+pr:
 search:entaulats channel
 pages:
 pr:
@@ -4610,8 +4610,8 @@ search:aandoenlijk pegge6
 pages:
 pr:
 search:saamme
-pages:25613-8.txt 15501-8.txt
-pr:0.001368 0.000566
+pages:
+pr:
 search:stasichore formaucassin
 pages:
 pr:
@@ -4922,8 +4922,8 @@ search:henkesi macpherson2
 pages:
 pr:
 search:bishopas splendid
-pages:19487-0.txt
-pr:0.002121
+pages:
+pr:
 search:tormentors nickte
 pages:
 pr:
@@ -5027,8 +5027,8 @@ search:stronghoofed ecrivain
 pages:
 pr:
 search:forepaws
-pages:7194.txt 23630-8.txt 289.txt 12336.txt
-pr:0.010126 0.010001 0.000761 0.000422
+pages:
+pr:
 search:tuberkulose beall
 pages:
 pr:
@@ -5117,8 +5117,8 @@ search:swipin apublikationa
 pages:
 pr:
 search:hereafter comforting
-pages:24396.txt 10325.txt 3469.txt
-pr:0.000394 0.000300 0.000300
+pages:
+pr:
 search:aloelike elvis
 pages:
 pr:
@@ -5312,8 +5312,8 @@ search:workshopsan aa1eaaooa1
 pages:
 pr:
 search:patriarchal hereafter
-pages:24396.txt
-pr:0.000394
+pages:
+pr:
 search:zentralkataloge kolteriksi
 pages:
 pr:
@@ -5321,8 +5321,8 @@ search:lemmen piirteidentuntija
 pages:
 pr:
 search:knuten bli
-pages:12119-8.txt
-pr:0.000300
+pages:
+pr:
 search:cavern tyoskennellen
 pages:
 pr:
@@ -5552,8 +5552,8 @@ search:offstage cambiase
 pages:
 pr:
 search:locusttrees hardly
-pages:23630-8.txt 7193.txt
-pr:0.010001 0.006114
+pages:
+pr:
 search:morells succumbsseventeen
 pages:
 pr:
@@ -5609,8 +5609,8 @@ search:devinctus amphitheaters
 pages:
 pr:
 search:splendid march
-pages:11174.txt 23744-8.txt 25631-8.txt 13709.txt 14366-8.txt 16426-8.txt 11528.txt 14324-8.txt 1378.txt 22959-8.txt 29650-8.txt 15171.txt 13179-8.txt 16691-8.txt 12894-8.txt 16808-8.txt 13778-8.txt 25492-8.txt 10450-8.txt 16098-8.txt 20890-0.txt 3316.txt
-pr:0.009048 0.006048 0.004881 0.002331 0.001702 0.001290 0.001107 0.000886 0.000719 0.000562 0.000555 0.000530 0.000473 0.000439 0.000388 0.000377 0.000324 0.000323 0.000300 0.000300 0.000300 0.000300
+pages:
+pr:
 search:pleeas cedulas
 pages:
 pr:
@@ -5963,14 +5963,14 @@ search:2596 talkin
 pages:
 pr:
 search:disapproved chameleon
-pages:16520-8.txt
-pr:0.002560
+pages:
+pr:
 search:moderado juges
 pages:
 pr:
 search:rank controversy
-pages:1081.txt 27814.txt 13548-8.txt 22203-8.txt 11623-8.txt 17462-8.txt
-pr:0.008705 0.008094 0.003295 0.001098 0.000610 0.000300
+pages:
+pr:
 search:hunter deensche
 pages:
 pr:
@@ -6125,8 +6125,8 @@ search:avesse heavenbelying
 pages:
 pr:
 search:darranger congratula
-pages:11714-8.txt
-pr:0.000300
+pages:
+pr:
 search:raap carried
 pages:
 pr:
@@ -6293,8 +6293,8 @@ search:didicisse polignacs
 pages:
 pr:
 search:hammon
-pages:14095-8.txt
-pr:0.002138
+pages:
+pr:
 search:speciebus 5961887
 pages:
 pr:
@@ -6302,8 +6302,8 @@ search:queenindisposition menschheid
 pages:
 pr:
 search:bridle shapes
-pages:27099-8.txt
-pr:0.000619
+pages:
+pr:
 search:gedenkreden burnes
 pages:
 pr:
@@ -6338,8 +6338,8 @@ search:talkin unnecessaries
 pages:
 pr:
 search:virallinen kaynnista
-pages:18474-8.txt
-pr:0.002546
+pages:
+pr:
 search:iltatuulessa charily
 pages:
 pr:
@@ -6527,8 +6527,8 @@ search:pleeas lompsahtivat
 pages:
 pr:
 search:arriba enamoradizo
-pages:15531-8.txt
-pr:0.001509
+pages:
+pr:
 search:muodostaman sormillaan
 pages:
 pr:
@@ -6605,8 +6605,8 @@ search:murcia patriarchal
 pages:
 pr:
 search:carried gaselee
-pages:5225.txt
-pr:0.000300
+pages:
+pr:
 search:shadoweth meaning
 pages:
 pr:
@@ -6662,8 +6662,8 @@ search:suomenkielisen hilkan
 pages:
 pr:
 search:stronghoofed march
-pages:12894-8.txt
-pr:0.000388
+pages:
+pr:
 search:entaulats yolla
 pages:
 pr:
@@ -6701,8 +6701,8 @@ search:saattoi emigre
 pages:
 pr:
 search:stereoscopic cheerful
-pages:10986.txt
-pr:0.000300
+pages:
+pr:
 search:fringe darkcomplexioned
 pages:
 pr:
@@ -6842,8 +6842,8 @@ search:leucotis christophers
 pages:
 pr:
 search:artificers chameleon
-pages:22127-8.txt
-pr:0.001171
+pages:
+pr:
 search:ae2aci14a matines
 pages:
 pr:
@@ -6983,8 +6983,8 @@ search:galveston disdraele
 pages:
 pr:
 search:convinrent
-pages:29924-8.txt
-pr:0.000300
+pages:
+pr:
 search:believable uberma
 pages:
 pr:
@@ -7073,8 +7073,8 @@ search:aae faring
 pages:
 pr:
 search:nimi helise
-pages:14035-8.txt
-pr:0.000300
+pages:
+pr:
 search:nykyajan truths
 pages:
 pr:
@@ -7226,8 +7226,8 @@ search:larrivantun wallichs
 pages:
 pr:
 search:businesses rank
-pages:13548-8.txt 11289-8.txt
-pr:0.003295 0.000300
+pages:
+pr:
 search:witherspoon galiza
 pages:
 pr:
@@ -7307,8 +7307,8 @@ search:firmes ovat
 pages:
 pr:
 search:businesses raced
-pages:7529.txt
-pr:0.000376
+pages:
+pr:
 search:tapahtumia unnecessaries
 pages:
 pr:
@@ -7424,8 +7424,8 @@ search:viscount tunethat
 pages:
 pr:
 search:affecto fogo
-pages:20999-8.txt 29417-8.txt
-pr:0.000317 0.000300
+pages:
+pr:
 search:giveth peasantfolk
 pages:
 pr:
@@ -7535,8 +7535,8 @@ search:magnificent nereo
 pages:
 pr:
 search:chambrea
-pages:28744-0.txt
-pr:0.000300
+pages:
+pr:
 search:marami herveys
 pages:
 pr:
@@ -7793,8 +7793,8 @@ search:stratospheretickling booten
 pages:
 pr:
 search:kunnes ryhdiltaan
-pages:15501-8.txt
-pr:0.000566
+pages:
+pr:
 search:murcia charily
 pages:
 pr:
@@ -7964,8 +7964,8 @@ search:dabydos moerbeiboomen
 pages:
 pr:
 search:publicada etc
-pages:27387-8.txt
-pr:0.000831
+pages:
+pr:
 search:saattoi zeylanicus
 pages:
 pr:
@@ -8018,8 +8018,8 @@ search:deva genesiaco
 pages:
 pr:
 search:quaintnesses didicisse
-pages:11528.txt
-pr:0.001107
+pages:
+pr:
 search:exposaient altre
 pages:
 pr:
@@ -8417,8 +8417,8 @@ search:muissa preveres
 pages:
 pr:
 search:juges
-pages:26813-8.txt
-pr:0.000793
+pages:
+pr:
 search:monnoie newfangleness
 pages:
 pr:
@@ -8669,8 +8669,8 @@ search:telemon eumeniderna
 pages:
 pr:
 search:kunnes johdolla
-pages:16333-8.txt
-pr:0.009609
+pages:
+pr:
 search:omien propaganda
 pages:
 pr:
@@ -8678,8 +8678,8 @@ search:lepanto producido
 pages:
 pr:
 search:vicomtesse concois
-pages:26091-8.txt
-pr:0.000342
+pages:
+pr:
 search:presente 5961887
 pages:
 pr:
@@ -8762,8 +8762,8 @@ search:primly lowest
 pages:
 pr:
 search:scratches hardly
-pages:24921-0.txt
-pr:0.000300
+pages:
+pr:
 search:americain centurions
 pages:
 pr:
@@ -8789,8 +8789,8 @@ search:dereliction 7compression
 pages:
 pr:
 search:paolo hardly
-pages:22153-8.txt
-pr:0.001191
+pages:
+pr:
 search:highflying tuvilta
 pages:
 pr:
@@ -8807,14 +8807,14 @@ search:speciebus cierto
 pages:
 pr:
 search:practically magnificent
-pages:12548-8.txt 10649-8.txt 24313-8.txt 16426-8.txt 11009.txt 11478.txt 22902.txt 24396.txt 21865-8.txt 2713-8.txt 30492-8.txt 13342-8.txt 11160.txt 11735.txt 13894-8.txt 19603-8.txt
-pr:0.008534 0.004138 0.003656 0.001290 0.001251 0.000921 0.000621 0.000394 0.000380 0.000378 0.000317 0.000304 0.000300 0.000300 0.000300 0.000300
+pages:
+pr:
 search:geld bewijs
 pages:
 pr:
 search:forepaws talkin
-pages:12336.txt
-pr:0.000422
+pages:
+pr:
 search:dabydos yuletide
 pages:
 pr:
@@ -8837,8 +8837,8 @@ search:propaganda huiveren
 pages:
 pr:
 search:lepanto march
-pages:25088-8.txt
-pr:0.000445
+pages:
+pr:
 search:salesmen trudged
 pages:
 pr:
@@ -9056,8 +9056,8 @@ search:sollertior whorl
 pages:
 pr:
 search:dundee rank
-pages:13342-8.txt
-pr:0.000304
+pages:
+pr:
 search:bagpipe populacehi
 pages:
 pr:
@@ -9347,8 +9347,8 @@ search:henkesi vinnen
 pages:
 pr:
 search:attendance experimental
-pages:12994-8.txt 18204-8.txt
-pr:0.001057 0.000300
+pages:
+pr:
 search:feminins verhalt
 pages:
 pr:
@@ -9440,8 +9440,8 @@ search:arriba seventysix
 pages:
 pr:
 search:motionless mummery
-pages:25637.txt
-pr:0.000336
+pages:
+pr:
 search:giveth geldersche
 pages:
 pr:
@@ -9491,8 +9491,8 @@ search:ligala discover
 pages:
 pr:
 search:workable hardly
-pages:25088-8.txt
-pr:0.000445
+pages:
+pr:
 search:aragao muuttunut
 pages:
 pr:
@@ -9572,8 +9572,8 @@ search:sufferable dirtycolored
 pages:
 pr:
 search:benefice elder
-pages:10957-8.txt
-pr:0.000650
+pages:
+pr:
 search:firmes aei14aaaa114aaeaci14aa1e
 pages:
 pr:
@@ -9587,8 +9587,8 @@ search:vendemus aocaaa
 pages:
 pr:
 search:suicide waters
-pages:27230-8.txt
-pr:0.000300
+pages:
+pr:
 search:youif nepotum
 pages:
 pr:
@@ -9653,8 +9653,8 @@ search:noisome aei14aaaa114aaeaci14aa1e
 pages:
 pr:
 search:revealing etc
-pages:27939-8.txt 12493.txt 27341-8.txt
-pr:0.007938 0.000300 0.000300
+pages:
+pr:
 search:bridle kotipitajani
 pages:
 pr:
@@ -9842,8 +9842,8 @@ search:parin fitments
 pages:
 pr:
 search:propped occupant
-pages:1081.txt
-pr:0.008705
+pages:
+pr:
 search:kuutamoilta furore
 pages:
 pr:
@@ -9872,8 +9872,8 @@ search:menojen setter
 pages:
 pr:
 search:rank merrimack
-pages:11159-8.txt
-pr:0.006157
+pages:
+pr:
 search:erscheinen lowest
 pages:
 pr:
@@ -9923,8 +9923,8 @@ search:calcul jokohan
 pages:
 pr:
 search:fragment observing
-pages:23630-8.txt 13548-8.txt 28744-0.txt
-pr:0.010001 0.003295 0.000300
+pages:
+pr:
 search:stairhead churchman
 pages:
 pr:
@@ -9992,8 +9992,8 @@ search:nocao booten
 pages:
 pr:
 search:rank rabbis
-pages:13342-8.txt
-pr:0.000304
+pages:
+pr:
 search:anothernow czechs
 pages:
 pr:
@@ -10001,8 +10001,8 @@ search:quaintnesses dixhuit
 pages:
 pr:
 search:e1a1ce2e2a 501c3
-pages:23981-0.txt
-pr:0.010845
+pages:
+pr:
 search:passeggiate vinnen
 pages:
 pr:
@@ -10058,8 +10058,8 @@ search:youngsters mostri
 pages:
 pr:
 search:genesiaco
-pages:25537-8.txt
-pr:0.000300
+pages:
+pr:
 search:omgooien fenomeno
 pages:
 pr:
@@ -10547,8 +10547,8 @@ search:tariffsfor aeaaa
 pages:
 pr:
 search:joneses discover
-pages:30492-8.txt
-pr:0.000317
+pages:
+pr:
 search:iiiiiiii1 mien
 pages:
 pr:
@@ -10556,8 +10556,8 @@ search:relroad restlessness
 pages:
 pr:
 search:attachment
-pages:12548-8.txt 27711-8.txt 19395-8.txt 18739.txt 11498-8.txt 16284-8.txt 19194.txt 12655-8.txt 13899.txt 12476.txt 13910.txt 3888.txt 2162.txt 11601-8.txt 10421.txt 11959-8.txt 16274-8.txt 19852.txt 23115.txt 27572-8.txt 3877.txt
-pr:0.008534 0.007979 0.006754 0.006226 0.006067 0.004509 0.003709 0.002562 0.002242 0.002058 0.000477 0.000379 0.000364 0.000311 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300 0.000300
+pages:
+pr:
 search:angelomais moderado
 pages:
 pr:
@@ -10700,8 +10700,8 @@ search:paihin ea34a
 pages:
 pr:
 search:snowcrested
-pages:27881-8.txt
-pr:0.005119
+pages:
+pr:
 search:kahdeksan deloges
 pages:
 pr:
@@ -10796,8 +10796,8 @@ search:angelomais infinita
 pages:
 pr:
 search:lincoharence ramman
-pages:13299-0.txt
-pr:0.000638
+pages:
+pr:
 search:passeggiate menojen
 pages:
 pr:
@@ -10871,8 +10871,8 @@ search:vakuuttamaan whorl
 pages:
 pr:
 search:darkcomplexioned talkin
-pages:17054.txt
-pr:0.000758
+pages:
+pr:
 search:tuki data6
 pages:
 pr:
@@ -10919,8 +10919,8 @@ search:hairitsemista piirteidentuntija
 pages:
 pr:
 search:furore incitat
-pages:27219-8.txt
-pr:0.000332
+pages:
+pr:
 search:cadavre frying
 pages:
 pr:
@@ -10955,8 +10955,8 @@ search:whorl frying
 pages:
 pr:
 search:concluir sombra
-pages:23035-8.txt
-pr:0.001151
+pages:
+pr:
 search:ligala saarnalupaa
 pages:
 pr:
@@ -10985,8 +10985,8 @@ search:thirtysixth evitar
 pages:
 pr:
 search:saleihin
-pages:27653-8.txt
-pr:0.000364
+pages:
+pr:
 search:fellowyour emigrar
 pages:
 pr:
@@ -11093,8 +11093,8 @@ search:yessair memorial
 pages:
 pr:
 search:saattoi sortovalta
-pages:15501-8.txt
-pr:0.000566
+pages:
+pr:
 search:noisome asettausi
 pages:
 pr:
@@ -11102,8 +11102,8 @@ search:unabhangigkeit devolve
 pages:
 pr:
 search:splendid hawk
-pages:11174.txt 3469.txt
-pr:0.009048 0.000300
+pages:
+pr:
 search:mightily vinnen
 pages:
 pr:
@@ -11219,8 +11219,8 @@ search:pararia vinculada
 pages:
 pr:
 search:inquiry pennyweights
-pages:3469.txt
-pr:0.000300
+pages:
+pr:
 search:attics heiratlaw
 pages:
 pr:
@@ -11318,8 +11318,8 @@ search:recurred faneuil
 pages:
 pr:
 search:youngsters shells
-pages:15025-8.txt
-pr:0.000310
+pages:
+pr:
 search:futurs ligaments
 pages:
 pr:
@@ -11366,8 +11366,8 @@ search:timbercruisers manhoodbut
 pages:
 pr:
 search:clearly httpwwwgutenbergorg249524958
-pages:24958.txt
-pr:0.002008
+pages:
+pr:
 search:fournier queenindisposition
 pages:
 pr:
@@ -11597,8 +11597,8 @@ search:faneuil vinculada
 pages:
 pr:
 search:sanctuary cavern
-pages:2523-8.txt
-pr:0.000659
+pages:
+pr:
 search:moderado dervishes
 pages:
 pr:
@@ -11750,8 +11750,8 @@ search:frauenfeld moerbeiboomen
 pages:
 pr:
 search:buckets channel
-pages:24696-8.txt
-pr:0.000315
+pages:
+pr:
 search:suicide presumes
 pages:
 pr:
@@ -11999,8 +11999,8 @@ search:kahdeksan currencies
 pages:
 pr:
 search:wrought buckets
-pages:24347.txt
-pr:0.002914
+pages:
+pr:
 search:benefice commentators
 pages:
 pr:
@@ -12167,8 +12167,8 @@ search:pagpanao clerkes
 pages:
 pr:
 search:menojen kaupungille
-pages:15501-8.txt
-pr:0.000566
+pages:
+pr:
 search:stronghoofed taivainen
 pages:
 pr:
@@ -12176,8 +12176,8 @@ search:occurrunt warsaws
 pages:
 pr:
 search:giveth dear
-pages:15097-0.txt
-pr:0.000300
+pages:
+pr:
 search:furst ivi
 pages:
 pr:
@@ -12311,8 +12311,8 @@ search:murcia intermediate
 pages:
 pr:
 search:hairitsemista tyot
-pages:29182-8.txt
-pr:0.005939
+pages:
+pr:
 search:hver restlessness
 pages:
 pr:
@@ -12341,8 +12341,8 @@ search:redigiert nakyvat
 pages:
 pr:
 search:employees aa1eaaooa1
-pages:24050-0.txt
-pr:0.000300
+pages:
+pr:
 search:magnificent vidrioso
 pages:
 pr:
@@ -12377,8 +12377,8 @@ search:drain merecedora
 pages:
 pr:
 search:propaganda patriarchal
-pages:29417-8.txt
-pr:0.000300
+pages:
+pr:
 search:mintroduisit vieuville
 pages:
 pr:
@@ -12860,8 +12860,8 @@ search:exultantly maksoi
 pages:
 pr:
 search:faring gait
-pages:605.txt
-pr:0.000339
+pages:
+pr:
 search:pendre lezer
 pages:
 pr:
@@ -12983,8 +12983,8 @@ search:piirteidentuntija charily
 pages:
 pr:
 search:wavering waters
-pages:29879-0.txt 24696-8.txt
-pr:0.002244 0.000315
+pages:
+pr:
 search:impassioned rypistyneina
 pages:
 pr:
@@ -13019,11 +13019,11 @@ search:gual johdolla
 pages:
 pr:
 search:brazil march
-pages:14366-8.txt 15452-8.txt 20421-8.txt
-pr:0.001702 0.000300 0.000300
+pages:
+pr:
 search:charmed cheerful
-pages:12164.txt 28301-8.txt 29166-8.txt 11060.txt 25302-8.txt 6764.txt
-pr:0.001347 0.000569 0.000403 0.000300 0.000300 0.000300
+pages:
+pr:
 search:privateers yessair
 pages:
 pr:
@@ -13220,8 +13220,8 @@ search:hanleys ivi
 pages:
 pr:
 search:around chameleon
-pages:22127-8.txt
-pr:0.001171
+pages:
+pr:
 search:truths unnecessaries
 pages:
 pr:
@@ -13343,8 +13343,8 @@ search:rivoltandosi booten
 pages:
 pr:
 search:experimental march
-pages:16808-8.txt 18204-8.txt
-pr:0.000377 0.000300
+pages:
+pr:
 search:deathblow overlagsna
 pages:
 pr:
@@ -13478,8 +13478,8 @@ search:charmed thirtysixth
 pages:
 pr:
 search:coelius insult
-pages:12061.txt
-pr:0.000304
+pages:
+pr:
 search:onetothree tunnottomia
 pages:
 pr:
@@ -13529,8 +13529,8 @@ search:latelie plata
 pages:
 pr:
 search:blodig bli
-pages:12119-8.txt
-pr:0.000300
+pages:
+pr:
 search:scholarly mahmood
 pages:
 pr:
@@ -13673,8 +13673,8 @@ search:tuberkulose memorial
 pages:
 pr:
 search:fightings discover
-pages:14812-8.txt
-pr:0.000300
+pages:
+pr:
 search:rabbie acreaa
 pages:
 pr:
@@ -14150,8 +14150,8 @@ search:gronfaythers salted
 pages:
 pr:
 search:martyrdom hardly
-pages:19487-0.txt 22153-8.txt 10957-8.txt 2162.txt
-pr:0.002121 0.001191 0.000650 0.000364
+pages:
+pr:
 search:unweeting harebrained
 pages:
 pr:
@@ -14171,8 +14171,8 @@ search:97 pesos
 pages:
 pr:
 search:viscount restlessness
-pages:10421.txt
-pr:0.000300
+pages:
+pr:
 search:c 5961887
 pages:
 pr:
@@ -14534,8 +14534,8 @@ search:huiveren hawk
 pages:
 pr:
 search:shadoweth sovereigns
-pages:19252-0.txt
-pr:0.000304
+pages:
+pr:
 search:callate a34cei14eaa34
 pages:
 pr:
@@ -14660,8 +14660,8 @@ search:totempole steves
 pages:
 pr:
 search:splendid midcolumbia
-pages:28815-8.txt
-pr:0.000300
+pages:
+pr:
 search:marlborough3 cousine
 pages:
 pr:
