@@ -4,6 +4,12 @@
 #include "Arquivo.h"
 #define MINIMUM_SIZE 32
 
+/**
+ * @brief Le linha de um arquivo.
+ * 
+ * @param fp 
+ * @return char* 
+ */
 char *ler_linha(FILE *fp)
 {
     int tam = MINIMUM_SIZE;
