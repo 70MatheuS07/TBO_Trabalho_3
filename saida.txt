@@ -148,6 +148,3 @@ pr:
 search:tout gekartelde
 pages:
 pr:
-search:
-pages:
-pr:

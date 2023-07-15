@@ -6,44 +6,55 @@
 
 /**
  * @brief Le linha de um arquivo.
- * 
- * @param fp 
- * @return char* 
+ *
+ * @param fp
+ * @return char*
  */
 char *ler_linha(FILE *fp)
 {
-    int tam = MINIMUM_SIZE;
-    int qtd;
-    char *linha = calloc(MINIMUM_SIZE, sizeof(*linha));
-    char *linhartn = calloc(MINIMUM_SIZE, sizeof(*linhartn));
-    while (1)
+  int tam = MINIMUM_SIZE;
+  int qtd;
+  char *linha = calloc(MINIMUM_SIZE, sizeof(*linha));
+  char *linhartn = calloc(MINIMUM_SIZE, sizeof(*linhartn));
+  char *temp;
+
+  while (1)
+  {
+    if (feof(fp))
     {
-        if (feof(fp))
-        {
-            break;
-        }
-        fgets(linha, MINIMUM_SIZE, fp);
-        linhartn = strcat(linhartn, linha);
-        qtd = strlen(linhartn) - 1;
-        if (linhartn[qtd] == '\n')
-        {
-            linhartn[qtd] = '\0';
-            free(linha);
-            return linhartn;
-        }
-        if (feof(fp))
-        {
-            free(linha);
-            return linhartn;
-        }
-        tam = tam +50;
-        linhartn = realloc(linhartn, tam);
+      break;
     }
-    free(linha);
-    free(linhartn);
-    return NULL;
+    fgets(linha, MINIMUM_SIZE, fp);
+    temp = realloc(linhartn, tam);
+    if (temp == NULL)
+    {
+      // Lida com falha na realocação de memória
+      free(linha);
+      free(linhartn);
+      return NULL;
+    }
+    linhartn = temp;
+    strcat(linhartn, linha);
+    qtd = strlen(linhartn) - 1;
+    if (linhartn[qtd] == '\n')
+    {
+      linhartn[qtd] = '\0';
+      free(linha);
+      return linhartn;
+    }
+    tam *= 2;
+  }
+  free(linha);
+  free(linhartn);
+  return NULL;
 }
 
+/**
+ * @brief
+ *
+ * @param arq_entrada
+ * @return int
+ */
 int ContaLinhasArquivoBuffer(char *arq_entrada)
 {
   FILE *f;

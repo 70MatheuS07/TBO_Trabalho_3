@@ -58,7 +58,7 @@ TST_words *MontaTST_Terms(TST_words *Terms, FILE *index_file, TST_words *StopWor
     fclose(pages);
     return Terms;
 }
-// acho que vou retirar, tentar fazer com outra estrutura
+
 TST_words *MontaTST_graph(TST_words *Graph, FILE *graph_file)
 {
     char *linha;
