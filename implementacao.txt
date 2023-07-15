@@ -1,2 +1,0 @@
-arvore tries
-arvore red-black trees
