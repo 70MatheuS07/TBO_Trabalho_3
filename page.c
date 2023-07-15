@@ -45,36 +45,63 @@ void setPageRank(double pagerank, tPage *page)
     page->PageRank = pagerank;
 }
 
-void liberaMatrizPage(tPage **page)
+void liberaMatrizPage(tPage **page, int qtd)
 {
-    for (int i = 0; page[i] != NULL; i++)
+    for (int i = 0; i < qtd; i++)
     {
+        if (page[i] == NULL)
+        {
+            break;
+        }
         if (page[i]->nome != NULL)
         {
             free(page[i]->nome);
+            page[i]->nome = NULL;
         }
 
         if (page[i]->lista != NULL)
         {
             LiberaLista(page[i]->lista);
+            page[i]->lista == NULL;
         }
 
         if (page[i] != NULL)
         {
             free(page[i]);
+            page[i] = NULL;
         }
     }
 
-    free(page);
+    if (page != NULL)
+    {
+        free(page);
+        page = NULL;
+    }
 }
 
-void limpaPageResult(tPage **result)
+void limpaPageResult(tPage **result, int qtd)
 {
-    for (int i = 0; result[i] != NULL; i++)
+    for (int i = 0; i < qtd; i++)
     {
-        free(result[i]->nome);
-        result[i]->nome = NULL;
-        free(result[i]);
-        result[i] = NULL;
+        if (result[i] == NULL)
+        {
+            break;
+        }
+        if (result[i]->nome != NULL)
+        {
+            free(result[i]->nome);
+            result[i]->nome = NULL;
+        }
+
+        if (result[i]->lista != NULL)
+        {
+            LiberaLista(result[i]->lista);
+        }
+
+        if (result[i] != NULL)
+        {
+            free(result[i]);
+            result[i] = NULL;
+        }
     }
 }

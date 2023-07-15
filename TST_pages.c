@@ -14,7 +14,7 @@ TST_pages *CreateTST_pages()
 
 TST_pages *create_node_pages()
 {
-    TST_pages *newNode = malloc(sizeof(TST_pages));
+    TST_pages *newNode = malloc(1 * sizeof(TST_pages));
     newNode->val = 0;
     newNode->l = NULL;
     newNode->m = NULL;
@@ -115,8 +115,13 @@ TST_pages *TST_intersect_pages(TST_pages *t1, TST_pages *t2, TST_pages *t3, char
 // Função que cria um buffer para armazenar o prefixo e chama a função recursiva
 TST_pages *TST_intersection(TST_pages *t1, TST_pages *t2)
 {
-    char *buffer = calloc(500, sizeof(char));            // Cria um buffer para armazenar o prefixo das strings
-    return TST_intersect_pages(t1, t2, NULL, buffer, 0); // Chama a função recursiva com uma terceira árvore vazia
+    char *buffer = calloc(500, sizeof(char));
+
+    // Cria um buffer para armazenar o prefixo das strings
+    TST_pages *result = TST_intersect_pages(t1, t2, NULL, buffer, 0); // Chama a função recursiva com uma terceira árvore vazia
+
+    free(buffer);
+    return result;
 }
 
 void collectWords(TST_pages *t, char *buffer, int depth, tPage **words, int *count, int tam)
@@ -154,21 +159,21 @@ tPage **getTSTWords(TST_pages *t, int *wordCount, int tam, tPage **words)
     int count = 0;
     char *buffer = calloc(1000, sizeof(char));
     collectWords(t, buffer, 0, words, &count, tam);
-
+    free(buffer);
     *wordCount = count; // Atualiza o número de palavras
     return words;
 }
 
-void liberaTST_Pages(TST_pages *tst_page)
+TST_pages *liberaTST_Pages(TST_pages *tst_page)
 {
-    if (tst_page == NULL)
+    if (tst_page != NULL)
     {
-        return;
+        liberaTST_Pages(tst_page->l);
+        liberaTST_Pages(tst_page->m);
+        liberaTST_Pages(tst_page->r);
+
+        free(tst_page);
     }
 
-    liberaTST_Pages(tst_page->l);
-    liberaTST_Pages(tst_page->m);
-    liberaTST_Pages(tst_page->r);
-
-    free(tst_page);
+    return NULL;
 }

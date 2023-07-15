@@ -20,6 +20,6 @@ TST_pages *TST_intersection(TST_pages *t1, TST_pages *t2);
 TST_pages *TST_intersect_pages(TST_pages *t1, TST_pages *t2, TST_pages *t3, char *prefix, int d);
 void collectWords(TST_pages *t, char *buffer, int depth, tPage **words, int *count, int tam);
 tPage **getTSTWords(TST_pages *t, int *wordCount, int tam, tPage **words);
-void liberaTST_Pages(TST_pages *tst_page);
+TST_pages *liberaTST_Pages(TST_pages *tst_page);
 
 #endif

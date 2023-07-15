@@ -114,18 +114,17 @@ Value TST_search_StopWords(TST_words *t, char *key)
     }
 }
 
-void liberaTST_words(TST_words *root)
+TST_words *liberaTST_words(TST_words *root)
 {
-    if (root == NULL)
+    if (root != NULL)
     {
-        return;
+        liberaTST_words(root->l);
+        liberaTST_words(root->m);
+        liberaTST_words(root->r);
+
+        liberaTST_Pages(root->pages);
+        free(root);
     }
 
-    liberaTST_words(root->l);
-    liberaTST_words(root->m);
-    liberaTST_words(root->r);
-
-    liberaTST_Pages(root->pages);
-
-    free(root);
+    return NULL;
 }

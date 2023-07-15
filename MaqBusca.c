@@ -56,7 +56,7 @@ TST_words *MontaTST_Terms(TST_words *Terms, FILE *index_file, TST_words *StopWor
         free(Pagesindex);
         fclose(pages);
     }
-    
+
     return Terms;
 }
 
@@ -294,6 +294,8 @@ void CalculaPageRanks(tPage **Graph, int tamvet)
             break;
         }
     }
+
+    free(atual);
 }
 
 void OrdenaEImprimeSaida(tPage **Grafo, tPage **pages, int tamvet, char *search)

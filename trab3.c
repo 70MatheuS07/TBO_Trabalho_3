@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 {
     int qtdlinhas = 0;
     qtdlinhas = ContaLinhasArquivoBuffer("index.txt") + 1;
-    tPage **result = calloc(qtdlinhas, sizeof(tPage *));
+    tPage **result = calloc(qtdlinhas + 1, sizeof(tPage *));
 
     FILE *Graph_file = fopen("graph.txt", "r");
     tPage **grafo = calloc(qtdlinhas, sizeof(tPage *));
@@ -68,11 +68,11 @@ int main(int argc, char *argv[])
         free(linha);
         free(linhaPesquisa);
 
-        limpaPageResult(result);
+        limpaPageResult(result, qtdlinhas);
     }
 
-    liberaMatrizPage(result);
-    liberaMatrizPage(grafo);
+    liberaMatrizPage(result, qtdlinhas);
+    liberaMatrizPage(grafo, qtdlinhas);
     liberaTST_words(Terms);
 
     return 0;

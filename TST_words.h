@@ -19,6 +19,6 @@ Value TST_search_StopWords(TST_words *t, char *key);
 TST_words *TST_insert_words(TST_words *t, char *key, char *page);
 TST_words *rec_search_words(TST_words *t, char *key, int d);
 TST_pages *TST_search_words(TST_words *t, char *key);
-void liberaTST_words(TST_words *root);
+TST_words *liberaTST_words(TST_words *root);
 
 #endif
