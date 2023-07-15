@@ -15,21 +15,17 @@ int main(int argc, char *argv[])
     FILE *Graph_file = fopen("graph.txt", "r");
     tPage **grafo = calloc(qtdlinhas, sizeof(tPage *));
     MontaGrafo(grafo, Graph_file, qtdlinhas);
-    fclose(Graph_file);
-
     CalculaPageRanks(grafo, qtdlinhas);
 
     TST_words *StopWords = CreateTST_words();
     FILE *Stop_file = fopen("stopwords.txt", "r");
-
     StopWords = MontaTST_StopWords(StopWords, Stop_file);
-
     fclose(Stop_file);
 
     FILE *index_file = fopen("index.txt", "r");
     TST_words *Terms = CreateTST_words();
-
     Terms = MontaTST_Terms(Terms, index_file, StopWords);
+    fclose(index_file);
 
     liberaTST_words(StopWords);
 

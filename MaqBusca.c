@@ -54,8 +54,9 @@ TST_words *MontaTST_Terms(TST_words *Terms, FILE *index_file, TST_words *StopWor
         }
         free(index);
         free(Pagesindex);
+        fclose(pages);
     }
-    fclose(pages);
+    
     return Terms;
 }
 
@@ -133,7 +134,7 @@ void MontaGrafo(tPage **Graph, FILE *graph_file, int tam)
         cont = 0;
     }
     fclose(graph_file);
-    fopen("graph.txt", "r");
+    graph_file = fopen("graph.txt", "r");
     int pos;
     for (int j = 0;; j++)
     {
@@ -172,6 +173,8 @@ void MontaGrafo(tPage **Graph, FILE *graph_file, int tam)
         cont = 0;
         free(linha);
     }
+
+    fclose(graph_file);
 }
 /**
 void CalculaPageRanks(char **pages, tPage **Graph, int tamvet)
