@@ -58,6 +58,7 @@ void LiberaLista(tLista *lista)
         free(atual);
         atual = proximo;
     }
+
     free(lista);
 }
 

@@ -40,11 +40,23 @@ int getQtd(tPage *p)
     return p->qtd;
 }
 
+/**
+ * @brief Salva page rank.
+ *
+ * @param pagerank
+ * @param page
+ */
 void setPageRank(double pagerank, tPage *page)
 {
     page->PageRank = pagerank;
 }
 
+/**
+ * @brief Libera memória da page.
+ *
+ * @param page
+ * @param qtd
+ */
 void liberaMatrizPage(tPage **page, int qtd)
 {
     for (int i = 0; i < qtd; i++)

@@ -22,6 +22,15 @@ TST_pages *create_node_pages()
     return newNode;
 }
 
+/**
+ * @brief 
+ * 
+ * @param t 
+ * @param key 
+ * @param val 
+ * @param d 
+ * @return TST_pages* 
+ */
 TST_pages *rec_insert_pages(TST_pages *t, char *key, Value val, int d)
 {
     unsigned char c = key[d];

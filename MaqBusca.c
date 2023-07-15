@@ -1,5 +1,12 @@
 #include "MaqBusca.h"
 
+/**
+ * @brief Monta a TST_StopWords.
+ *
+ * @param StopWords
+ * @param Stop_file
+ * @return TST_words*
+ */
 TST_words *MontaTST_StopWords(TST_words *StopWords, FILE *Stop_file)
 {
     char *stopword;
@@ -16,6 +23,14 @@ TST_words *MontaTST_StopWords(TST_words *StopWords, FILE *Stop_file)
     return StopWords;
 }
 
+/**
+ * @brief Monta a TST_Terms.
+ *
+ * @param Terms
+ * @param index_file
+ * @param StopWords
+ * @return TST_words*
+ */
 TST_words *MontaTST_Terms(TST_words *Terms, FILE *index_file, TST_words *StopWords)
 {
     char *index;
@@ -60,6 +75,13 @@ TST_words *MontaTST_Terms(TST_words *Terms, FILE *index_file, TST_words *StopWor
     return Terms;
 }
 
+/**
+ * @brief Monta TST_graph.
+ *
+ * @param Graph
+ * @param graph_file
+ * @return TST_words*
+ */
 TST_words *MontaTST_graph(TST_words *Graph, FILE *graph_file)
 {
     char *linha;
@@ -96,6 +118,13 @@ TST_words *MontaTST_graph(TST_words *Graph, FILE *graph_file)
     }
 }
 
+/**
+ * @brief Monta o grafd principal.
+ *
+ * @param Graph
+ * @param graph_file
+ * @param tam
+ */
 void MontaGrafo(tPage **Graph, FILE *graph_file, int tam)
 {
     char *linha;
@@ -176,77 +205,13 @@ void MontaGrafo(tPage **Graph, FILE *graph_file, int tam)
 
     fclose(graph_file);
 }
+
 /**
-void CalculaPageRanks(char **pages, tPage **Graph, int tamvet)
-{
-
-    int tam = 0;
-    for (int i = 0; pages[i] != NULL; i++)
-    {
-        tam = i;
-    }
-    double *atual = calloc(tam, sizeof(double));
-    int *map = calloc(tam, sizeof(int));
-
-    // mapeia os termos no vetor principal
-    int pos;
-    for (int i = 0; i < tam; i++)
-    {
-        for (int j = 0; j < tamvet; j++)
-        {
-            if (strcmp(pages[i], getNomePage(j)) == 0)
-            {
-                pos = j;
-                break;
-            }
-        }
-        map[i] = pos;
-        setPageRank(1 / tamvet, Graph[map[i]]);
-    }
-    // calcula o pagerank de fato
-    double pagerank;
-    double somatorio = 0;
-    tPage *pagAtual;
-    int finaliza = 0;
-    while (1)
-    {
-        for (int i = 0; i < tam; i++)
-        {
-            pagAtual = Graph[map[i]];
-            tCelula *p = RetornaPrimeiro(pagAtual);
-            if (getQtd(p) == 0)
-            {
-                pagerank = (0.15 / tamvet) + 0.85 * getPageRank(pagAtual);
-            }
-            else
-            {
-                pagerank = (0.15 / tamvet);
-            }
-            while (p != NULL)
-            {
-                somatorio += getPageRank(Graph[getpos(p)]);
-                p = RetornaProx(p);
-            }
-            pagerank += 0.85 * somatorio;
-            atual[i] = pagerank;
-        }
-
-        for (int i = 0; i < tam; i++)
-        {
-            if ((getPageRank(Graph[map[i]]) - atual[i]) < pow(10, -6))
-            {
-                break;
-                finaliza = 1;
-            }
-        }
-        if (finaliza)
-        {
-            break;
-        }
-
-    }
-}*/
-
+ * @brief Calcula page ranks.
+ *
+ * @param Graph
+ * @param tamvet
+ */
 void CalculaPageRanks(tPage **Graph, int tamvet)
 {
     int tam = 0;
@@ -298,6 +263,14 @@ void CalculaPageRanks(tPage **Graph, int tamvet)
     free(atual);
 }
 
+/**
+ * @brief Ordena e imprime saida.
+ *
+ * @param Grafo
+ * @param pages
+ * @param tamvet
+ * @param search
+ */
 void OrdenaEImprimeSaida(tPage **Grafo, tPage **pages, int tamvet, char *search)
 {
     int i;
@@ -343,6 +316,13 @@ void OrdenaEImprimeSaida(tPage **Grafo, tPage **pages, int tamvet, char *search)
     printf("\n");
 }
 
+/**
+ * @brief Compara as paginas.
+ *
+ * @param page1
+ * @param page2
+ * @return int
+ */
 int PagesCmp(const void *page1, const void *page2)
 {
     tPage *A1 = *(tPage **)page1;

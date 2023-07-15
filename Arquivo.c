@@ -42,7 +42,7 @@ char *ler_linha(FILE *fp)
       free(linha);
       return linhartn;
     }
-    tam *= 2;
+    tam += 50;
   }
   free(linha);
   free(linhartn);
@@ -50,7 +50,7 @@ char *ler_linha(FILE *fp)
 }
 
 /**
- * @brief
+ * @brief Conta linhas no buffer.
  *
  * @param arq_entrada
  * @return int
