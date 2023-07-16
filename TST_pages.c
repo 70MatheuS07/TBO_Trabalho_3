@@ -16,6 +16,7 @@ TST_pages *create_node_pages()
 {
     TST_pages *newNode = malloc(1 * sizeof(TST_pages));
     newNode->val = 0;
+    newNode->c='\0';
     newNode->l = NULL;
     newNode->m = NULL;
     newNode->r = NULL;

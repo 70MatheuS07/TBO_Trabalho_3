@@ -20,6 +20,8 @@ TST_words *create_node_words()
     newNode->r = CreateTST_words();
     newNode->l = CreateTST_words();
     newNode->m = CreateTST_words();
+    newNode->c='\0';
+    newNode->stp_wrd=0;
     return newNode;
 }
 

@@ -16,9 +16,16 @@ char *ler_linha(FILE *fp)
     int qtd;
     char *linha = calloc(MINIMUM_SIZE, sizeof(*linha));
     char *linhartn = calloc(MINIMUM_SIZE, sizeof(*linhartn));
-    while (!feof(fp))
+    while (1)
     {
+        if (feof(fp))
+        {
+            break;
+        }
         fgets(linha, MINIMUM_SIZE, fp);
+        if(strcmp(linha,"\0")==0){
+          break;
+        }
         linhartn = strcat(linhartn, linha);
         qtd = strlen(linhartn) - 1;
         if (linhartn[qtd] == '\n')
@@ -27,7 +34,11 @@ char *ler_linha(FILE *fp)
             free(linha);
             return linhartn;
         }
-
+        if (feof(fp))
+        {
+            free(linha);
+            return linhartn;
+        }
         tam = tam +50;
         linhartn = realloc(linhartn, tam);
     }
@@ -35,7 +46,6 @@ char *ler_linha(FILE *fp)
     free(linhartn);
     return NULL;
 }
-
 /**
  * @brief Conta linhas no buffer.
  *
@@ -53,7 +63,8 @@ int ContaLinhasArquivoBuffer(char *arq_entrada)
   while (fgets(buffer, BLOCK_SIZE, f) != NULL)
   {
     char *pos = strchr(buffer, '\n');
-    if(pos==NULL &&(strcmp(buffer,"\n")!=0)){
+    if (pos == NULL && (strcmp(buffer, "\n") != 0))
+    {
       i++;
     }
     while (pos != NULL)
@@ -62,7 +73,6 @@ int ContaLinhasArquivoBuffer(char *arq_entrada)
       i++;
       pos = strchr(pos + 1, '\n');
     }
-    
   }
 
   fclose(f);
