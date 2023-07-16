@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
     int qtdlinhas = 0;
-    qtdlinhas = ContaLinhasArquivoBuffer("index.txt") + 1;
+    qtdlinhas = ContaLinhasArquivoBuffer("index.txt");
     tPage **result = calloc(qtdlinhas + 1, sizeof(tPage *));
 
     FILE *Graph_file = fopen("graph.txt", "r");

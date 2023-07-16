@@ -55,7 +55,7 @@ TST_words *MontaTST_Terms(TST_words *Terms, FILE *index_file, TST_words *StopWor
             {
                 break;
             }
-            char *token = strtok(linha, " \t"); // Delimitadores: espaço e \t
+            char *token = strtok(linha, " \t\n"); // Delimitadores: espaço e \t
 
             while (token != NULL)
             {
@@ -63,7 +63,7 @@ TST_words *MontaTST_Terms(TST_words *Terms, FILE *index_file, TST_words *StopWor
                 {
                     Terms = TST_insert_words(Terms, token, index);
                 }
-                token = strtok(NULL, " \t");
+                token = strtok(NULL, " \t\n");
             }
             free(linha);
         }
@@ -149,15 +149,12 @@ void MontaGrafo(tPage **Graph, FILE *graph_file, int tam)
             else if (cont == 1)
             {
                 qtd = atoi(token);
+                pagerank = (1 / (double)tam);
+                Graph[i] = CriaPagina(arq_Origem, pagerank, qtd, CriaLista());
             }
-            else
-            {
-                break;
-            }
-            pagerank = (1 / (double)tam);
-            Graph[i] = CriaPagina(arq_Origem, pagerank, qtd, CriaLista());
-            cont++;
+            
             token = strtok(NULL, " \t");
+            cont++;
         }
         free(linha);
         cont = 0;
@@ -193,6 +190,7 @@ void MontaGrafo(tPage **Graph, FILE *graph_file, int tam)
                     {
                         pos = j;
                         InsereNaLista(pos, getLista(Graph[i]));
+                        break;
                     }
                 }
             }
@@ -254,7 +252,7 @@ void CalculaPageRanks(tPage **Graph, int tamvet)
             E += diff;
             setPageRank(atual[i], Graph[i]);
         }
-        if (E < pow(10, -6))
+        if (E < (double)pow(10, -6))
         {
             break;
         }

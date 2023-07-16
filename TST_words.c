@@ -2,7 +2,7 @@
 #include "TST_pages.h"
 struct node_words
 {
-    Value qtd;
+    Value stp_wrd;
     TST_pages *pages;
     unsigned char c;
     TST_words *l, *m, *r;
@@ -45,14 +45,14 @@ TST_words *rec_insert_words(TST_words *t, char *key, char *page, int d)
     }
     else
     {
-        if (t->pages == NULL)
+        if (page == NULL)
         {
-            t->qtd = 0;
+            t->stp_wrd = 1;
         }
         if (page != NULL)
         {
+            t->stp_wrd = 0;
             t->pages = TST_insert_pages(t->pages, page, 1);
-            t->qtd++;
         }
     }
     return t;
@@ -84,7 +84,13 @@ TST_words *rec_search_words(TST_words *t, char *key, int d)
     }
     else
     {
-        return t;
+        if(t->pages!=NULL||t->stp_wrd==1){
+            return t;
+        }
+        else{
+            return NULL;
+        }
+     
     }
 }
 
