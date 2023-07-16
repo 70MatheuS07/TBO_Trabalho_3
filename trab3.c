@@ -32,8 +32,9 @@ int main(int argc, char *argv[])
     char palavra_search[1000];
     char lixo;
     int cont = 0;
-    TST_pages *IntercPages, *ant;
+    TST_pages *IntercPages = NULL, *ant = NULL;
     char *linha, *linhaPesquisa;
+    int value = 1;
     while (1)
     {
         linha = ler_linha(stdin);
@@ -65,10 +66,13 @@ int main(int argc, char *argv[])
         int contPalavras = 0;
         result = getTSTWords(IntercPages, &contPalavras, qtdlinhas, result);
         OrdenaEImprimeSaida(grafo, result, qtdlinhas, linhaPesquisa);
+        if (IntercPages != ant)
+            liberaTST_Pages(IntercPages);
         free(linha);
         free(linhaPesquisa);
 
         limpaPageResult(result, qtdlinhas);
+        value++;
     }
 
     liberaMatrizPage(result, qtdlinhas);
