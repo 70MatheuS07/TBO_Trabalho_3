@@ -31,7 +31,7 @@ TST_words *MontaTST_StopWords(TST_words *StopWords, FILE *Stop_file)
  * @param StopWords
  * @return TST_words*
  */
-TST_words *MontaTST_Terms(TST_words *Terms, FILE *index_file, TST_words *StopWords)
+TST_words *MontaTST_Terms(TST_words *Terms, FILE *index_file, TST_words *StopWords, char*pages_string)
 {
     char *index;
     FILE *pages;
@@ -42,9 +42,10 @@ TST_words *MontaTST_Terms(TST_words *Terms, FILE *index_file, TST_words *StopWor
         {
             break;
         }
-        int tam = strlen(index) + 8;
+        int tamnamedir=strlen(pages_string)+1;
+        int tam = strlen(index) + tamnamedir;
         char *Pagesindex = malloc(sizeof(char) * tam);
-        strcpy(Pagesindex, "pages/");
+        strcpy(Pagesindex, pages_string);
 
         strcat(Pagesindex, index);
         pages = fopen(Pagesindex, "r");
@@ -125,7 +126,7 @@ TST_words *MontaTST_graph(TST_words *Graph, FILE *graph_file)
  * @param graph_file
  * @param tam
  */
-void MontaGrafo(tPage **Graph, FILE *graph_file, int tam)
+void MontaGrafo(tPage **Graph, FILE *graph_file, int tam, char*graph_string)
 {
     char *linha;
     char *arq_Origem;
@@ -160,7 +161,7 @@ void MontaGrafo(tPage **Graph, FILE *graph_file, int tam)
         cont = 0;
     }
     fclose(graph_file);
-    graph_file = fopen("graph.txt", "r");
+    graph_file = fopen(graph_string, "r");
     int pos;
     for (int j = 0;; j++)
     {
